@@ -1,0 +1,21 @@
+//
+//  com.blitting.math.Statistics
+//
+//  Created by Jason Sturges.
+//
+package com.blitting.math
+{
+
+	public class Statistics
+	{
+
+		public static function probability(occured:Number, outcomes:Number):Boolean
+		{
+			if (Math.random() * outcomes < occured)
+				return true;
+
+			return false;
+		}
+
+	}
+}
