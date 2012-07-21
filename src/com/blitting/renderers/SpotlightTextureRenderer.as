@@ -6,8 +6,8 @@
 package com.blitting.renderers
 {
 	import com.blitting.core.Blitting;
-	import com.blitting.math.Geometry;
 	import com.blitting.display.BitmapRenderer;
+	import com.blitting.math.Geometry;
 
 	import flash.display.BitmapData;
 	import flash.display.GradientType;
