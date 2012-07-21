@@ -14,6 +14,6 @@ Where do I find more information about Blitting?
 
 Here are a few starting points:
 
-* Blitting examples
+* [Blitting Examples](http://github.com/jasonsturges/blitting-examples)
 * [Official Homepage](http://blitting.com)
 * [API Reference](http://blitting.com)
