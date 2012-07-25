@@ -3,7 +3,7 @@
 //
 //  Created by Jason Sturges.
 //
-package com.blitting.color.palette
+package com.blitting.color
 {
 
 	/**
@@ -19,7 +19,7 @@ package com.blitting.color.palette
 	 * }
 	 * </pre>
 	 */
-	public class X11ColorPalette
+	public class ColorPalette
 	{
 
 		//------------------------------
