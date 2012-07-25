@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="com.adobe.utils.AGALMiniAssembler"/>
+    <classEntry path="com.blitting.display.Viewport3d"/>
+    <classEntry path="com.blitting.error.BlittingInvalidOperation"/>
+    <classEntry path="com.blitting.renderers.PerlinRenderer"/>
+    <classEntry path="com.blitting.lifecycle.IInitializable"/>
+    <classEntry path="com.blitting.renderers.GearGraphicsRenderer"/>
+    <classEntry path="com.blitting.error.BlittingRenderError"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>
