@@ -45,7 +45,7 @@ package com.blitting.renderers
 
 		public function initialize():void
 		{
-			seed = Math.random() * int.MAX_VALUE;
+			seed = Math.floor(Math.random() * int.MAX_VALUE);
 		}
 
 		override public function render(bitmapData:BitmapData):void

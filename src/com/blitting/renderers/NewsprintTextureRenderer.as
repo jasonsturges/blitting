@@ -7,12 +7,13 @@ package com.blitting.renderers
 {
 	import com.blitting.core.Blitting;
 	import com.blitting.display.BitmapRenderer;
+	import com.blitting.lifecycle.IInitializable;
 
 	import flash.display.BitmapData;
 	import flash.display.Graphics;
 	import flash.display.Shape;
 
-	public class NewsprintTextureRenderer extends BitmapRenderer
+	public class NewsprintTextureRenderer extends BitmapRenderer implements IInitializable
 	{
 
 		//------------------------------
@@ -34,6 +35,10 @@ package com.blitting.renderers
 
 			this.pixelColor = pixelColor;
 			this.backgroundColor = backgroundColor;
+		}
+
+		public function initialize():void
+		{
 		}
 
 		override public function render(bitmapData:BitmapData):void

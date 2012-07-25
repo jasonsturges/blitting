@@ -7,6 +7,7 @@ package com.blitting.renderers
 {
 	import com.blitting.core.Blitting;
 	import com.blitting.display.BitmapRenderer;
+	import com.blitting.lifecycle.IInitializable;
 	import com.blitting.math.Geometry;
 
 	import flash.display.BitmapData;
@@ -18,7 +19,7 @@ package com.blitting.renderers
 	import flash.filters.BlurFilter;
 	import flash.geom.Matrix;
 
-	public class SpotlightTextureRenderer extends BitmapRenderer
+	public class SpotlightTextureRenderer extends BitmapRenderer implements IInitializable
 	{
 
 		//------------------------------
@@ -45,6 +46,10 @@ package com.blitting.renderers
 			blurFilter.blurX = 10;
 			blurFilter.blurY = 10;
 			blurFilter.quality = BitmapFilterQuality.HIGH;
+		}
+
+		public function initialize():void
+		{
 		}
 
 		override public function render(bitmapData:BitmapData):void

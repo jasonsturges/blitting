@@ -6,23 +6,26 @@
 package com.blitting.renderers
 {
 	import com.blitting.display.BitmapRenderer;
+	import com.blitting.lifecycle.IInitializable;
 
 	import flash.display.BitmapData;
 
-	public class StaticTextureRenderer extends BitmapRenderer
+	public class StaticTextureRenderer extends BitmapRenderer implements IInitializable
 	{
 
 		//------------------------------
 		//  model
 		//------------------------------
 
-		public var low:uint = 0;
+		public var low:uint;
 
-		public var high:uint = 200;
+		public var high:uint;
 
-		public var channelOptions:uint = 7;
+		public var channelOptions:uint;
 
-		public var grayscale:Boolean = true;
+		public var grayscale:Boolean;
+
+		public var seed:int;
 
 
 		//------------------------------
@@ -32,6 +35,11 @@ package com.blitting.renderers
 		public function StaticTextureRenderer()
 		{
 			super();
+		}
+
+		public function initialize():void
+		{
+			seed = Math.floor(Math.random() * int.MAX_VALUE);
 		}
 
 		override public function render(bitmapData:BitmapData):void

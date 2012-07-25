@@ -6,11 +6,12 @@
 package com.blitting.renderers
 {
 	import com.blitting.display.BitmapRenderer;
+	import com.blitting.lifecycle.IInitializable;
 
 	import flash.display.BitmapData;
 	import flash.geom.Matrix;
 
-	public class CheckerboardTextureRenderer extends BitmapRenderer
+	public class CheckerboardTextureRenderer extends BitmapRenderer implements IInitializable
 	{
 
 		//------------------------------
@@ -38,6 +39,10 @@ package com.blitting.renderers
 			this.checkerHeight = checkerHeight;
 			this.checkerColor = checkerColor;
 			this.backgroundColor = backgroundColor;
+		}
+
+		public function initialize():void
+		{
 		}
 
 		override public function render(bitmapData:BitmapData):void

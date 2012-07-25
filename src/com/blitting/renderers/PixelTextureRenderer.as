@@ -6,12 +6,13 @@
 package com.blitting.renderers
 {
 	import com.blitting.display.BitmapRenderer;
+	import com.blitting.lifecycle.IInitializable;
 
 	import flash.display.BitmapData;
 	import flash.geom.Matrix;
 	import flash.geom.Rectangle;
 
-	public class PixelTextureRenderer extends BitmapRenderer
+	public class PixelTextureRenderer extends BitmapRenderer implements IInitializable
 	{
 
 		//------------------------------
@@ -70,6 +71,10 @@ package com.blitting.renderers
 			this.pixelHeight = pixelHeight;
 			this.horizontalSpace = horizontalSpace;
 			this.verticalSpace = verticalSpace;
+		}
+
+		public function initialize():void
+		{
 		}
 
 		override public function render(bitmapData:BitmapData):void
