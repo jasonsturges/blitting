@@ -17,13 +17,13 @@ package com.blitting.renderers
 		//  model
 		//------------------------------
 
-		public var low:uint;
+		public var low:uint = 0;
 
-		public var high:uint;
+		public var high:uint = 200;
 
-		public var channelOptions:uint;
+		public var channelOptions:uint = 7;
 
-		public var grayscale:Boolean;
+		public var grayscale:Boolean = true;
 
 		public var seed:int;
 
