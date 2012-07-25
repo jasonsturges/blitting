@@ -13,7 +13,7 @@ package com.blitting.renderers
 	import flash.display.Graphics;
 	import flash.display.Shape;
 
-	public class NewsprintTextureRenderer extends BitmapRenderer implements IInitializable
+	public class NewsprintRenderer extends BitmapRenderer implements IInitializable
 	{
 
 		//------------------------------
@@ -29,7 +29,7 @@ package com.blitting.renderers
 		//  lifecycle
 		//------------------------------
 
-		public function NewsprintTextureRenderer(pixelColor:uint=0x0, backgroundColor:uint=0xffffff)
+		public function NewsprintRenderer(pixelColor:uint=0x0, backgroundColor:uint=0xffffff)
 		{
 			super();
 

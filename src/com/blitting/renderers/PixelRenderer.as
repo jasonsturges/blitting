@@ -12,7 +12,7 @@ package com.blitting.renderers
 	import flash.geom.Matrix;
 	import flash.geom.Rectangle;
 
-	public class PixelTextureRenderer extends BitmapRenderer implements IInitializable
+	public class PixelRenderer extends BitmapRenderer implements IInitializable
 	{
 
 		//------------------------------
@@ -54,7 +54,7 @@ package com.blitting.renderers
 		//  lifecycle
 		//------------------------------
 
-		public function PixelTextureRenderer(w:Number=0,
+		public function PixelRenderer(w:Number=0,
 											 h:Number=0,
 											 colorFunction:Function=null,
 											 iterations:uint=100,

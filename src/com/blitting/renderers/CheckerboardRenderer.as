@@ -11,7 +11,7 @@ package com.blitting.renderers
 	import flash.display.BitmapData;
 	import flash.geom.Matrix;
 
-	public class CheckerboardTextureRenderer extends BitmapRenderer implements IInitializable
+	public class CheckerboardRenderer extends BitmapRenderer implements IInitializable
 	{
 
 		//------------------------------
@@ -31,7 +31,7 @@ package com.blitting.renderers
 		//  lifecycle
 		//------------------------------
 
-		public function CheckerboardTextureRenderer(checkerWidth:Number=24, checkerHeight:Number=24, checkerColor:uint=0x0, backgroundColor:uint=0xffffff)
+		public function CheckerboardRenderer(checkerWidth:Number=24, checkerHeight:Number=24, checkerColor:uint=0x0, backgroundColor:uint=0xffffff)
 		{
 			super();
 

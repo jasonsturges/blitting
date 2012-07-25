@@ -19,7 +19,7 @@ package com.blitting.renderers
 	import flash.filters.BlurFilter;
 	import flash.geom.Matrix;
 
-	public class SpotlightTextureRenderer extends BitmapRenderer implements IInitializable
+	public class SpotlightRenderer extends BitmapRenderer implements IInitializable
 	{
 
 		//------------------------------
@@ -35,7 +35,7 @@ package com.blitting.renderers
 		//  lifecycle
 		//------------------------------
 
-		public function SpotlightTextureRenderer(fillColor:uint=0xffffffff)
+		public function SpotlightRenderer(fillColor:uint=0xffffffff)
 		{
 			super();
 

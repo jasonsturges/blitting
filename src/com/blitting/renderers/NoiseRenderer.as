@@ -10,7 +10,7 @@ package com.blitting.renderers
 
 	import flash.display.BitmapData;
 
-	public class StaticTextureRenderer extends BitmapRenderer implements IInitializable
+	public class NoiseRenderer extends BitmapRenderer implements IInitializable
 	{
 
 		//------------------------------
@@ -32,7 +32,7 @@ package com.blitting.renderers
 		//  lifecycle
 		//------------------------------
 
-		public function StaticTextureRenderer()
+		public function NoiseRenderer()
 		{
 			super();
 		}
