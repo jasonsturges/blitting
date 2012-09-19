@@ -8,6 +8,7 @@
     <classEntry path="com.blitting.lifecycle.IInitializable"/>
     <classEntry path="com.blitting.renderers.GearGraphicsRenderer"/>
     <classEntry path="com.blitting.error.BlittingRenderError"/>
+    <classEntry path="com.blitting.controller.MovieClipController"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
