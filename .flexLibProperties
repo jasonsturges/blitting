@@ -6,6 +6,7 @@
     <classEntry path="com.blitting.error.BlittingInvalidOperation"/>
     <classEntry path="com.blitting.lifecycle.IInitializable"/>
     <classEntry path="com.blitting.error.BlittingRenderError"/>
+    <classEntry path="com.blitting.model.ObjectPool"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
