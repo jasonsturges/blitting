@@ -7,6 +7,10 @@
     <classEntry path="com.blitting.lifecycle.IInitializable"/>
     <classEntry path="com.blitting.error.BlittingRenderError"/>
     <classEntry path="com.blitting.model.ObjectPool"/>
+    <classEntry path="com.blitting.time.CallLater"/>
+    <classEntry path="com.blitting.time.RandomTimer"/>
+    <classEntry path="com.blitting.time.FunctionTimer"/>
+    <classEntry path="com.blitting.time.CountdownTimer"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
