@@ -5,18 +5,20 @@
 //
 package com.blitting.core
 {
+	import com.blitting.controller.IAbstractController;
 	import com.blitting.lifecycle.IDisposable;
 	import com.blitting.lifecycle.IProcess;
 	import com.blitting.lifecycle.IRenderable;
 	import com.blitting.lifecycle.IResizable;
 	import com.blitting.lifecycle.IValidatable;
+	import com.blitting.model.IAbstractSingleton;
 
 	import flash.display.Shape;
 	import flash.events.Event;
 	import flash.utils.Dictionary;
 	import flash.utils.getTimer;
 
-	public class Blitting implements IProcess, IDisposable
+	public class Blitting implements IProcess, IDisposable, IAbstractController, IAbstractSingleton
 	{
 
 		//------------------------------

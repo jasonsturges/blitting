@@ -5,9 +5,11 @@
 //
 package com.blitting.event
 {
+	import com.blitting.model.IAbstractSingleton;
+
 	import flash.events.EventDispatcher;
 
-	public class EventPipeline extends EventDispatcher
+	public class EventPipeline extends EventDispatcher implements IAbstractSingleton
 	{
 
 		//------------------------------

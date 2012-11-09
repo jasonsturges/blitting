@@ -14,6 +14,11 @@
     <classEntry path="com.blitting.service.AbstractService"/>
     <classEntry path="com.blitting.service.XmlService"/>
     <classEntry path="com.blitting.service.AbstractSocketService"/>
+    <classEntry path="com.blitting.controller.MovieClipController"/>
+    <classEntry path="com.blitting.controller.IAbstractController"/>
+    <classEntry path="com.blitting.model.IAbstractSingleton"/>
+    <classEntry path="com.blitting.model.IAbstractFactory"/>
+    <classEntry path="com.blitting.effects.IAbstractEffect"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
