@@ -1,5 +1,5 @@
 //
-//  com.blitting.core.BlittingEngine
+//  com.blitting.core.Blitting
 //
 //  Created by Jason Sturges.
 //

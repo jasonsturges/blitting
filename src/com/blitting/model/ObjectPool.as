@@ -6,6 +6,7 @@
 package com.blitting.model
 {
 	import com.blitting.lifecycle.IDisposable;
+	import com.blitting.lifecycle.IInitializable;
 
 	import flash.utils.Dictionary;
 	import flash.utils.getDefinitionByName;
@@ -62,7 +63,14 @@ package com.blitting.model
 			var set:Vector.<Object> = Vector.<Object>(pool[type]);
 
 			if (set.length > 0)
-				return set.pop();
+			{
+				var object:Object = set.pop();
+
+				if (object is IInitializable)
+					IInitializable(object).initialize();
+
+				return object;
+			}
 
 			return new type();
 		}

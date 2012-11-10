@@ -448,6 +448,9 @@ package com.blitting.display
 		override public function dispose():void
 		{
 			super.dispose();
+
+			bitmapData.dispose();
+			bitmapData = null;
 		}
 
 	}

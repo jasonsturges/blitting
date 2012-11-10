@@ -5,14 +5,14 @@
 //
 package com.blitting.display
 {
-	import com.blitting.core.Blitting;
 	import com.blitting.lifecycle.IDisposable;
-	import com.blitting.lifecycle.IRenderable;
 
+	import flash.events.EventDispatcher;
+	import flash.events.IEventDispatcher;
 	import flash.geom.Point;
 	import flash.geom.Rectangle;
 
-	public class AbstractRenderer implements IDisposable
+	public class AbstractRenderer extends EventDispatcher implements IDisposable
 	{
 
 		//------------------------------
@@ -34,8 +34,10 @@ package com.blitting.display
 		//  lifecycle
 		//------------------------------
 
-		public function AbstractRenderer()
+		public function AbstractRenderer(target:IEventDispatcher=null)
 		{
+			super(target);
+
 			bounds = new Rectangle();
 			registration = new Point(0, 0);
 		}
