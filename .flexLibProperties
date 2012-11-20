@@ -40,6 +40,9 @@
     <classEntry path="com.blitting.time.FunctionTimer"/>
     <classEntry path="com.blitting.time.RandomTimer"/>
     <classEntry path="com.blitting.constant.ColorPalette"/>
+    <classEntry path="com.blitting.math.Numeric"/>
+    <classEntry path="com.blitting.math.Geometry"/>
+    <classEntry path="com.blitting.math.Statistics"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
