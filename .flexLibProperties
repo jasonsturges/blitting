@@ -1,24 +1,44 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+<flexLibProperties includeAllClasses="false" useMultiPlatformConfig="false" version="3">
   <includeClasses>
     <classEntry path="com.adobe.utils.AGALMiniAssembler"/>
-    <classEntry path="com.blitting.display.Viewport3d"/>
-    <classEntry path="com.blitting.error.BlittingInvalidOperation"/>
-    <classEntry path="com.blitting.lifecycle.IInitializable"/>
-    <classEntry path="com.blitting.error.BlittingRenderError"/>
-    <classEntry path="com.blitting.model.ObjectPool"/>
-    <classEntry path="com.blitting.time.CallLater"/>
-    <classEntry path="com.blitting.time.RandomTimer"/>
-    <classEntry path="com.blitting.time.FunctionTimer"/>
-    <classEntry path="com.blitting.time.CountdownTimer"/>
-    <classEntry path="com.blitting.service.AbstractService"/>
-    <classEntry path="com.blitting.service.XmlService"/>
-    <classEntry path="com.blitting.service.AbstractSocketService"/>
-    <classEntry path="com.blitting.controller.MovieClipController"/>
+    <classEntry path="com.adobe.utils.FractalGeometryGenerator"/>
+    <classEntry path="com.adobe.utils.PerspectiveMatrix3D"/>
     <classEntry path="com.blitting.controller.IAbstractController"/>
-    <classEntry path="com.blitting.model.IAbstractSingleton"/>
-    <classEntry path="com.blitting.model.IAbstractFactory"/>
+    <classEntry path="com.blitting.controller.MovieClipController"/>
+    <classEntry path="com.blitting.core.Blitting"/>
+    <classEntry path="com.blitting.core.InvalidationType"/>
+    <classEntry path="com.blitting.core.RenderType"/>
+    <classEntry path="com.blitting.core.blitting_internal"/>
+    <classEntry path="com.blitting.display.AbstractRenderer"/>
+    <classEntry path="com.blitting.display.AbstractViewport"/>
+    <classEntry path="com.blitting.display.BitmapRenderer"/>
+    <classEntry path="com.blitting.display.BufferedViewport"/>
+    <classEntry path="com.blitting.display.GraphicsRenderer"/>
+    <classEntry path="com.blitting.display.RenderedViewport"/>
+    <classEntry path="com.blitting.display.ResizableViewport"/>
+    <classEntry path="com.blitting.display.Viewport"/>
+    <classEntry path="com.blitting.display.Viewport3d"/>
     <classEntry path="com.blitting.effects.IAbstractEffect"/>
+    <classEntry path="com.blitting.error.BlittingInvalidOperation"/>
+    <classEntry path="com.blitting.error.BlittingRenderError"/>
+    <classEntry path="com.blitting.event.EventPipeline"/>
+    <classEntry path="com.blitting.lifecycle.IDisposable"/>
+    <classEntry path="com.blitting.lifecycle.IInitializable"/>
+    <classEntry path="com.blitting.lifecycle.IProcess"/>
+    <classEntry path="com.blitting.lifecycle.IRenderable"/>
+    <classEntry path="com.blitting.lifecycle.IResizable"/>
+    <classEntry path="com.blitting.lifecycle.IValidatable"/>
+    <classEntry path="com.blitting.model.IAbstractFactory"/>
+    <classEntry path="com.blitting.model.IAbstractSingleton"/>
+    <classEntry path="com.blitting.model.ObjectPool"/>
+    <classEntry path="com.blitting.service.AbstractService"/>
+    <classEntry path="com.blitting.service.AbstractSocketService"/>
+    <classEntry path="com.blitting.service.XmlService"/>
+    <classEntry path="com.blitting.time.CallLater"/>
+    <classEntry path="com.blitting.time.CountdownTimer"/>
+    <classEntry path="com.blitting.time.FunctionTimer"/>
+    <classEntry path="com.blitting.time.RandomTimer"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>

@@ -23,6 +23,8 @@ package com.blitting.time
 	 */
 	public class RandomTimer extends Timer
 	{
+		include "../core/Version.as";
+
 
 		//------------------------------
 		//  time

@@ -23,6 +23,8 @@ package com.blitting.display
 	 */
 	public class Viewport extends AbstractViewport implements IValidatable
 	{
+		include "../core/Version.as";
+
 
 		//------------------------------
 		//  model

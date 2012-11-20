@@ -17,6 +17,8 @@ package com.blitting.service
 
 	public class AbstractService extends EventDispatcher implements IDisposable
 	{
+		include "../core/Version.as";
+
 
 		//------------------------------
 		//  model

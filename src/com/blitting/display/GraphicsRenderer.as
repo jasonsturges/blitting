@@ -10,6 +10,8 @@ package com.blitting.display
 
 	public class GraphicsRenderer extends AbstractRenderer
 	{
+		include "../core/Version.as";
+
 
 		//------------------------------
 		//  model

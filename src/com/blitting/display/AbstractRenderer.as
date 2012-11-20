@@ -14,6 +14,8 @@ package com.blitting.display
 
 	public class AbstractRenderer extends EventDispatcher implements IDisposable
 	{
+		include "../core/Version.as";
+
 
 		//------------------------------
 		//  model

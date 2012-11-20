@@ -15,11 +15,14 @@ package com.blitting.core
 
 	import flash.display.Shape;
 	import flash.events.Event;
+	import flash.events.EventDispatcher;
 	import flash.utils.Dictionary;
 	import flash.utils.getTimer;
 
-	public class Blitting implements IProcess, IDisposable, IAbstractController, IAbstractSingleton
+	public class Blitting extends EventDispatcher implements IProcess, IDisposable, IAbstractController, IAbstractSingleton
 	{
+		include "../core/Version.as";
+
 
 		//------------------------------
 		//  singleton instance

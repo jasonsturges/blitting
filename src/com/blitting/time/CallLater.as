@@ -22,6 +22,8 @@ package com.blitting.time
 	 */
 	public class CallLater
 	{
+		include "../core/Version.as";
+
 
 		//------------------------------
 		//  model

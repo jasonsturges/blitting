@@ -23,6 +23,8 @@ package com.blitting.display
 	 */
 	public class BufferedViewport extends ResizableViewport
 	{
+		include "../core/Version.as";
+
 
 		//------------------------------
 		//  model

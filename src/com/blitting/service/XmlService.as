@@ -11,6 +11,8 @@ package com.blitting.service
 
 	public class XmlService extends AbstractService
 	{
+		include "../core/Version.as";
+
 
 		//------------------------------
 		//  model

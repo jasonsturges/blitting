@@ -10,6 +10,8 @@ package com.blitting.time
 
 	public class CountdownTimer extends Timer
 	{
+		include "../core/Version.as";
+
 
 		//------------------------------
 		//  model

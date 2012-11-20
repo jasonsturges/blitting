@@ -9,6 +9,8 @@ package com.blitting.display
 
 	public class BitmapRenderer extends AbstractRenderer
 	{
+		include "../core/Version.as";
+
 
 		//------------------------------
 		//  model

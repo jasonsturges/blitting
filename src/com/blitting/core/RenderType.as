@@ -8,6 +8,8 @@ package com.blitting.core
 
 	public class RenderType
 	{
+		include "../core/Version.as";
+
 
 		public static const CONTINUOUS:String = "CONTINUOUS";
 

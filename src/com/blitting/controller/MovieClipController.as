@@ -4,6 +4,7 @@ package com.blitting.controller
 
 	import flash.display.DisplayObject;
 	import flash.display.MovieClip;
+	import flash.events.EventDispatcher;
 	import flash.utils.Dictionary;
 
 	/**
@@ -11,9 +12,11 @@ package com.blitting.controller
 	 * movie clips to pause and resume all currently
 	 * playing clips.
 	 */
-	public class MovieClipController implements IAbstractController, IAbstractSingleton
+	public class MovieClipController extends EventDispatcher implements IAbstractController, IAbstractSingleton
 	{
-
+		include "../core/Version.as";
+		
+		
 		//------------------------------
 		//  singleton instance
 		//------------------------------

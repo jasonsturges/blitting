@@ -13,7 +13,9 @@ package com.blitting.time
 	 */
 	public class FunctionTimer extends RandomTimer
 	{
-
+		include "../core/Version.as";
+		
+		
 		//------------------------------
 		//  model
 		//------------------------------

@@ -14,6 +14,8 @@ package com.blitting.model
 
 	public class ObjectPool implements IAbstractFactory, IAbstractSingleton
 	{
+		include "../core/Version.as";
+
 
 		//------------------------------
 		//  singleton instance

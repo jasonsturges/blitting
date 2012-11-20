@@ -26,6 +26,8 @@ package com.blitting.display
 	 */
 	public class RenderedViewport extends Viewport implements IRenderable
 	{
+		include "../core/Version.as";
+
 
 		//------------------------------
 		//  model

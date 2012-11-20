@@ -20,6 +20,8 @@ package com.blitting.display
 	 */
 	public class ResizableViewport extends RenderedViewport implements IResizable
 	{
+		include "../core/Version.as";
+
 
 		//------------------------------
 		//  model

@@ -23,6 +23,8 @@ package com.blitting.display
 	 */
 	public class AbstractViewport extends Sprite implements IDisposable
 	{
+		include "../core/Version.as";
+
 
 		//------------------------------
 		//  lifecycle

@@ -22,6 +22,8 @@ package com.blitting.display
 	 */
 	public class Viewport3d extends ResizableViewport
 	{
+		include "../core/Version.as";
+
 
 		//------------------------------
 		//  model

@@ -11,6 +11,8 @@ package com.blitting.event
 
 	public class EventPipeline extends EventDispatcher implements IAbstractSingleton
 	{
+		include "../core/Version.as";
+
 
 		//------------------------------
 		//  singleton instance
