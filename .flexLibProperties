@@ -39,6 +39,7 @@
     <classEntry path="com.blitting.time.CountdownTimer"/>
     <classEntry path="com.blitting.time.FunctionTimer"/>
     <classEntry path="com.blitting.time.RandomTimer"/>
+    <classEntry path="com.blitting.constant.ColorPalette"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
