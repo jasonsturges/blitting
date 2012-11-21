@@ -43,6 +43,8 @@
     <classEntry path="com.blitting.math.Numeric"/>
     <classEntry path="com.blitting.math.Geometry"/>
     <classEntry path="com.blitting.math.Statistics"/>
+    <classEntry path="com.blitting.text.TextFieldFactory"/>
+    <classEntry path="com.blitting.time.TimeSpan"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>

@@ -27,7 +27,7 @@ package com.blitting.time
 
 
 		//------------------------------
-		//  time
+		//  model
 		//------------------------------
 
 		/** Minimum possible delay for random timer signal. */
