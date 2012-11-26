@@ -1,9 +1,9 @@
 //
-//  com.blitting.service.AbstractService
+//  com.blitting.net.AbstractService
 //
 //  Created by Jason Sturges.
 //
-package com.blitting.service
+package com.blitting.net
 {
 	import com.blitting.lifecycle.IDisposable;
 

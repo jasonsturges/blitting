@@ -1,9 +1,9 @@
 //
-//  com.blitting.service.XmlService
+//  com.blitting.net.XmlService
 //
 //  Created by Jason Sturges.
 //
-package com.blitting.service
+package com.blitting.net
 {
 	import flash.events.Event;
 	import flash.events.IOErrorEvent;
