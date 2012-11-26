@@ -44,7 +44,9 @@
     <classEntry path="com.blitting.math.Geometry"/>
     <classEntry path="com.blitting.math.Statistics"/>
     <classEntry path="com.blitting.text.TextFieldFactory"/>
-    <classEntry path="com.blitting.time.TimeSpan"/>
+    <classEntry path="com.blitting.model.TimeSpan"/>
+    <classEntry path="com.blitting.model.UUID"/>
+    <classEntry path="com.blitting.model.Color"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>

@@ -6,6 +6,13 @@
 package com.blitting.lifecycle
 {
 
+	/**
+	 * Implements <code>dispose()</code> interface as class
+	 * destructor.
+	 *
+	 * @author jsturges
+	 *
+	 */
 	public interface IDisposable
 	{
 
