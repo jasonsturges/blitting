@@ -1,7 +1,12 @@
-package com.blitting.time
+package com.blitting.model
 {
+	import com.blitting.lifecycle.IInitializable;
 
-	public class TimeSpan
+	import flash.net.registerClassAlias;
+
+	[RemoteClass(alias = "com.blitting.time.TimeSpan")]
+	[Bindable]
+	public class TimeSpan implements IInitializable
 	{
 		include "../core/Version.as";
 
@@ -21,12 +26,12 @@ package com.blitting.time
 		//------------------------------
 
 		/**
-		 * 
+		 *
 		 */
 		protected var time:Number = Number.POSITIVE_INFINITY;
 
 		/**
-		 * 
+		 * Milliseconds component of time interval.
 		 */
 		public function get milliseconds():int
 		{
@@ -136,7 +141,7 @@ package com.blitting.time
 		//------------------------------
 
 		/**
-		 * 
+		 *
 		 * @param time
 		 */
 		public function TimeSpan(time:Number=Number.POSITIVE_INFINITY)
@@ -145,9 +150,17 @@ package com.blitting.time
 		}
 
 		/**
-		 * 
+		 * IInitialize initialization.
+		 */
+		public function initialize():void
+		{
+			this.time = Number.POSITIVE_INFINITY;
+		}
+
+		/**
+		 *
 		 * @param timeSpan
-		 * 
+		 *
 		 */
 		public function add(timeSpan:TimeSpan):void
 		{
@@ -155,9 +168,9 @@ package com.blitting.time
 		}
 
 		/**
-		 * 
+		 *
 		 * @param timeSpan
-		 * 
+		 *
 		 */
 		public function subtract(timeSpan:TimeSpan):void
 		{
@@ -165,11 +178,11 @@ package com.blitting.time
 		}
 
 		/**
-		 * 
+		 *
 		 * @param startDate
 		 * @param endDate
-		 * @return 
-		 * 
+		 * @return
+		 *
 		 */
 		public static function from(startDate:Date, endDate:Date):TimeSpan
 		{
@@ -177,10 +190,10 @@ package com.blitting.time
 		}
 
 		/**
-		 * 
+		 *
 		 * @param days
-		 * @return 
-		 * 
+		 * @return
+		 *
 		 */
 		public static function fromDays(days:Number):TimeSpan
 		{
@@ -188,10 +201,10 @@ package com.blitting.time
 		}
 
 		/**
-		 * 
+		 *
 		 * @param minutes
-		 * @return 
-		 * 
+		 * @return
+		 *
 		 */
 		public static function fromMinutes(minutes:Number):TimeSpan
 		{
@@ -199,10 +212,10 @@ package com.blitting.time
 		}
 
 		/**
-		 * 
+		 *
 		 * @param seconds
-		 * @return 
-		 * 
+		 * @return
+		 *
 		 */
 		public static function fromSeconds(seconds:Number):TimeSpan
 		{
@@ -210,10 +223,10 @@ package com.blitting.time
 		}
 
 		/**
-		 * 
+		 *
 		 * @param milliseconds
-		 * @return 
-		 * 
+		 * @return
+		 *
 		 */
 		public static function fromMilliseconds(milliseconds:Number):TimeSpan
 		{
@@ -221,14 +234,22 @@ package com.blitting.time
 		}
 
 		/**
-		 * 
+		 *
 		 * @param date
-		 * @return 
-		 * 
+		 * @return
+		 *
 		 */
 		public static function until(date:Date):TimeSpan
 		{
 			return new TimeSpan(date.time - new Date().time);
+		}
+
+		/**
+		 *
+		 */
+		public static function registerClass():void
+		{
+			flash.net.registerClassAlias("com.blitting.time.TimeSpan", TimeSpan);
 		}
 
 	}
