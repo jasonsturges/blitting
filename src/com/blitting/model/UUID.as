@@ -6,6 +6,7 @@
 package com.blitting.model
 {
 	import com.blitting.lifecycle.IDisposable;
+	import com.blitting.lifecycle.IInitializable;
 
 	import flash.net.registerClassAlias;
 	import flash.utils.ByteArray;
@@ -16,7 +17,7 @@ package com.blitting.model
 	 * Universal unique identifier (UUID) akin to
 	 * globally unique identifier (GUID).
 	 */
-	public class UUID implements IDisposable
+	public class UUID implements IDisposable, IInitializable
 	{
 		include "../core/Version.as";
 
@@ -57,10 +58,19 @@ package com.blitting.model
 
 		public function UUID(uid:String=null)
 		{
-			_buffer = new ByteArray();
+			initialize();
 
 			if (uid)
 				fromString(uid);
+		}
+
+		/**
+		 * IInitializable initialize.
+		 *
+		 */
+		public function initialize():void
+		{
+			_buffer = new ByteArray();
 		}
 
 		/**

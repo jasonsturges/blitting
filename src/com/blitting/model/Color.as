@@ -6,6 +6,7 @@
 package com.blitting.model
 {
 	import com.blitting.constant.ColorPalette;
+	import com.blitting.lifecycle.IInitializable;
 
 	import flash.net.registerClassAlias;
 
@@ -14,7 +15,7 @@ package com.blitting.model
 	/**
 	 * Color structure.
 	 */
-	public class Color
+	public class Color implements IInitializable
 	{
 		include "../core/Version.as";
 
@@ -119,6 +120,15 @@ package com.blitting.model
 		public function Color(red:uint=0x0, green:uint=0x0, blue:uint=0x0, alpha:uint=0xff):void
 		{
 			color = alpha << 24 | red << 16 | green << 8 | blue;
+		}
+
+		/**
+		 * IInitialize initialization.
+		 *
+		 */
+		public function initialize():void
+		{
+			color = 0x0;
 		}
 
 		/**
