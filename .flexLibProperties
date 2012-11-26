@@ -32,9 +32,9 @@
     <classEntry path="com.blitting.model.IAbstractFactory"/>
     <classEntry path="com.blitting.model.IAbstractSingleton"/>
     <classEntry path="com.blitting.model.ObjectPool"/>
-    <classEntry path="com.blitting.service.AbstractService"/>
-    <classEntry path="com.blitting.service.AbstractSocketService"/>
-    <classEntry path="com.blitting.service.XmlService"/>
+    <classEntry path="com.blitting.net.AbstractService"/>
+    <classEntry path="com.blitting.net.AbstractSocketService"/>
+    <classEntry path="com.blitting.net.XmlService"/>
     <classEntry path="com.blitting.time.CallLater"/>
     <classEntry path="com.blitting.time.CountdownTimer"/>
     <classEntry path="com.blitting.time.FunctionTimer"/>
@@ -47,6 +47,7 @@
     <classEntry path="com.blitting.model.TimeSpan"/>
     <classEntry path="com.blitting.model.UUID"/>
     <classEntry path="com.blitting.model.Color"/>
+    <classEntry path="com.blitting.constant.DataState"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
