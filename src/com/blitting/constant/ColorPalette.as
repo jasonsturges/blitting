@@ -21,6 +21,8 @@ package com.blitting.constant
 	 */
 	public class ColorPalette
 	{
+		include "../core/Version.as";
+
 
 		//------------------------------
 		//  all colors
