@@ -48,6 +48,7 @@
     <classEntry path="com.blitting.model.UUID"/>
     <classEntry path="com.blitting.model.Color"/>
     <classEntry path="com.blitting.constant.DataState"/>
+    <classEntry path="com.blitting.display.SpriteSheet"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
