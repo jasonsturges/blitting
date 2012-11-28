@@ -188,14 +188,10 @@ package com.blitting.model
 		 * @see ColorPalette
 		 *
 		 */
-		public static function fromName(name:String):uint
+		public static function fromName(name:String):Color
 		{
-			return ColorPalette[name];
+			return Color.fromRGB(ColorPalette.fromName(name));
 		}
-
-		//------------------------------
-		//  (A)RGB to int
-		//------------------------------
 
 		/**
 		 * Get 32-bit ARGB color as integer.

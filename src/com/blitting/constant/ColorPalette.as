@@ -25,7 +25,7 @@ package com.blitting.constant
 
 
 		//------------------------------
-		//  all colors
+		//  model
 		//------------------------------
 
 		/** Array of all colors defined. */
@@ -1136,5 +1136,16 @@ package com.blitting.constant
 		public static const yellow3:uint = 0xcdcd00;
 		public static const yellow4:uint = 0x8b8b00;
 		public static const yellowGreen:uint = 0x9acd32;
+
+
+		//------------------------------
+		//  model
+		//------------------------------
+
+		public static function fromName(name:String):uint
+		{
+			return ColorPalette[name];
+		}
+
 	}
 }
