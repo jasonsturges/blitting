@@ -5,6 +5,7 @@
 //
 package com.blitting.display
 {
+	import com.blitting.core.blitting_internal;
 	import com.blitting.lifecycle.IDisposable;
 
 	import flash.events.EventDispatcher;
@@ -12,6 +13,13 @@ package com.blitting.display
 	import flash.geom.Point;
 	import flash.geom.Rectangle;
 
+	use namespace blitting_internal;
+
+	/**
+	 * 
+	 * @author jsturges
+	 * 
+	 */
 	public class AbstractRenderer extends EventDispatcher implements IDisposable
 	{
 		include "../core/Version.as";

@@ -5,10 +5,13 @@
 //
 package com.blitting.display
 {
+	import com.blitting.core.blitting_internal;
 	import com.blitting.lifecycle.IResizable;
 
 	import flash.display.StageDisplayState;
 	import flash.events.Event;
+
+	use namespace blitting_internal;
 
 	/**
 	 * Extends RenderedViewport to include fullstage
@@ -101,7 +104,7 @@ package com.blitting.display
 			bounds.width = width;
 			bounds.height = height;
 
-			engine.addLayout(this);
+			blitting.addLayout(this);
 
 			invalidate();
 		}

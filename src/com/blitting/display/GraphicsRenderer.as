@@ -5,9 +5,18 @@
 //
 package com.blitting.display
 {
+	import com.blitting.core.blitting_internal;
+
 	import flash.display.DisplayObject;
 	import flash.display.Graphics;
 
+	use namespace blitting_internal;
+
+	/**
+	 * 
+	 * @author jsturges
+	 * 
+	 */
 	public class GraphicsRenderer extends AbstractRenderer
 	{
 		include "../core/Version.as";

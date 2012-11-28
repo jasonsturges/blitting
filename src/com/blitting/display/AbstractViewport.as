@@ -5,11 +5,14 @@
 //
 package com.blitting.display
 {
+	import com.blitting.core.blitting_internal;
 	import com.blitting.lifecycle.IDisposable;
 
 	import flash.display.DisplayObject;
 	import flash.display.Sprite;
 	import flash.events.Event;
+
+	use namespace blitting_internal;
 
 	/**
 	 * Provides base lifecycle for views, including

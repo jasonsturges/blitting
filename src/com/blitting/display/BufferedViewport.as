@@ -6,6 +6,8 @@
 package com.blitting.display
 {
 
+	import com.blitting.core.blitting_internal;
+
 	import flash.display.Bitmap;
 	import flash.display.BitmapData;
 	import flash.display.IBitmapDrawable;
@@ -18,8 +20,12 @@ package com.blitting.display
 	import flash.geom.Rectangle;
 	import flash.utils.ByteArray;
 
+	use namespace blitting_internal;
+
 	/**
-	 *
+	 * 
+	 * @author jsturges
+	 * 
 	 */
 	public class BufferedViewport extends ResizableViewport
 	{

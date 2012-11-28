@@ -1,14 +1,16 @@
 package com.blitting.display
 {
 	import com.blitting.core.RenderType;
+	import com.blitting.core.blitting_internal;
 
 	import flash.display.Stage3D;
 	import flash.display3D.Context3D;
 	import flash.display3D.Context3DRenderMode;
 	import flash.events.ErrorEvent;
 	import flash.events.Event;
-	import flash.geom.PerspectiveProjection;
 	import flash.system.ApplicationDomain;
+
+	use namespace blitting_internal;
 
 	/**
 	 * Stage3D Viewport.
@@ -18,7 +20,9 @@ package com.blitting.display
 	 * <code>
 	 *    new Viewport3d(Context3DRenderMode.SOFTWARE);
 	 * </code>
+	 *
 	 * @author jsturges
+	 *
 	 */
 	public class Viewport3d extends ResizableViewport
 	{

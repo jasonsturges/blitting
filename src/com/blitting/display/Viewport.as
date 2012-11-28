@@ -5,12 +5,15 @@
 //
 package com.blitting.display
 {
+	import com.blitting.core.blitting_internal;
 	import com.blitting.lifecycle.IValidatable;
-
+	
 	import flash.display.StageAlign;
 	import flash.display.StageScaleMode;
 	import flash.geom.Point;
 	import flash.geom.Rectangle;
+
+	use namespace blitting_internal;
 
 	/**
 	 * Extends AbstractViewport to include autoOrientation,

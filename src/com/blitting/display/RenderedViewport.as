@@ -8,11 +8,14 @@ package com.blitting.display
 	import com.blitting.core.Blitting;
 	import com.blitting.core.InvalidationType;
 	import com.blitting.core.RenderType;
+	import com.blitting.core.blitting_internal;
 	import com.blitting.lifecycle.IRenderable;
 
 	import flash.events.Event;
 	import flash.geom.Rectangle;
 	import flash.utils.getTimer;
+
+	use namespace blitting_internal;
 
 	/**
 	 * Extends Viewport to include BlittingEngine
@@ -36,7 +39,7 @@ package com.blitting.display
 		/**
 		 * Rendering engine.
 		 */
-		protected var engine:Blitting;
+		blitting_internal var blitting:Blitting;
 
 		/**
 		 * Current (total) frame number.
@@ -81,7 +84,7 @@ package com.blitting.display
 		{
 			super();
 
-			engine = Blitting.getInstance();
+			blitting = Blitting.getInstance();
 			renderType = RenderType.ON_INVALIDATION;
 
 			_frameNumber = 0;
@@ -99,7 +102,7 @@ package com.blitting.display
 			// add to engine rendering pipeline if
 			// RenderType is CONTINUOUS.
 			if (renderType == RenderType.CONTINUOUS)
-				engine.addRenderer(this, renderType);
+				blitting.addRenderer(this, renderType);
 
 			invalidate();
 		}
@@ -109,7 +112,7 @@ package com.blitting.display
 		 */
 		public function changeRenderType(renderType:String):void
 		{
-			engine.changeRenderer(this, renderType);
+			blitting.changeRenderer(this, renderType);
 		}
 
 		/**
@@ -127,12 +130,12 @@ package com.blitting.display
 		{
 			super.invalidate();
 
-			engine.addInvalidation(this, InvalidationType.SELF);
+			blitting.addInvalidation(this, InvalidationType.SELF);
 
 			// if render type is ON_INVALIDATION, commit
 			// to rendering engine ONCE.
 			if (renderType == RenderType.ON_INVALIDATION)
-				engine.addRenderer(this, RenderType.ONCE);
+				blitting.addRenderer(this, RenderType.ONCE);
 		}
 
 		/**
@@ -173,7 +176,7 @@ package com.blitting.display
 			super.removedFromStageHandler(event);
 
 			// remove from engine rendering pipeline.
-			engine.removeRenderer(this);
+			blitting.removeRenderer(this);
 		}
 
 		/**
@@ -184,7 +187,7 @@ package com.blitting.display
 			super.dispose();
 
 			// remove from engine rendering pipeline.
-			engine.removeRenderer(this);
+			blitting.removeRenderer(this);
 		}
 
 	}
