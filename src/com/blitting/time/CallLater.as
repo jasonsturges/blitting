@@ -58,11 +58,11 @@ package com.blitting.time
 		/**
 		 * Constructor
 		 *
-		 * @param callFunc The function to call.
 		 * @param delay    The delay in ms to make the call.
+		 * @param callFunc The function to call.
 		 * @param params   Parameters to be passed to the function.
 		 */
-		public function CallLater(callFunc:Function=null, delay:int=1, ... params:Array)
+		public function CallLater(delay:int=1, callFunc:Function=null, ... params:Array)
 		{
 			_callFunc = callFunc;
 			_delay = delay;
@@ -75,7 +75,7 @@ package com.blitting.time
 		 */
 		public function call():void
 		{
-			var delay:int = (delay > 0) ? (delay) : (0);
+			var delay:int = (_delay > 0) ? (_delay) : (0);
 
 			if (delay > 0 && !_timer)
 			{
