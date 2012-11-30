@@ -1139,12 +1139,17 @@ package com.blitting.constant
 
 
 		//------------------------------
-		//  model
+		//  lifecycle
 		//------------------------------
 
 		public static function fromName(name:String):uint
 		{
 			return ColorPalette[name];
+		}
+
+		public static function randomColor():uint
+		{
+			return ColorPalette[ColorPalette.Colors[Math.random() * (ColorPalette.Colors.length) | 0]];
 		}
 
 	}
