@@ -4,8 +4,12 @@
     <classEntry path="com.adobe.utils.AGALMiniAssembler"/>
     <classEntry path="com.adobe.utils.FractalGeometryGenerator"/>
     <classEntry path="com.adobe.utils.PerspectiveMatrix3D"/>
+    <classEntry path="com.blitting.constant.ColorPalette"/>
+    <classEntry path="com.blitting.constant.DataState"/>
     <classEntry path="com.blitting.controller.IAbstractController"/>
     <classEntry path="com.blitting.controller.MovieClipController"/>
+    <classEntry path="com.blitting.controls.AbstractControl"/>
+    <classEntry path="com.blitting.controls.IControl"/>
     <classEntry path="com.blitting.core.Blitting"/>
     <classEntry path="com.blitting.core.InvalidationType"/>
     <classEntry path="com.blitting.core.RenderType"/>
@@ -15,6 +19,8 @@
     <classEntry path="com.blitting.display.BitmapRenderer"/>
     <classEntry path="com.blitting.display.BufferedViewport"/>
     <classEntry path="com.blitting.display.GraphicsRenderer"/>
+    <classEntry path="com.blitting.display.IBitmapRenderer"/>
+    <classEntry path="com.blitting.display.IGraphicsRenderer"/>
     <classEntry path="com.blitting.display.RenderedViewport"/>
     <classEntry path="com.blitting.display.ResizableViewport"/>
     <classEntry path="com.blitting.display.Viewport"/>
@@ -29,25 +35,23 @@
     <classEntry path="com.blitting.lifecycle.IRenderable"/>
     <classEntry path="com.blitting.lifecycle.IResizable"/>
     <classEntry path="com.blitting.lifecycle.IValidatable"/>
+    <classEntry path="com.blitting.math.Geometry"/>
+    <classEntry path="com.blitting.math.Numeric"/>
+    <classEntry path="com.blitting.math.Statistics"/>
+    <classEntry path="com.blitting.model.Color"/>
     <classEntry path="com.blitting.model.IAbstractFactory"/>
     <classEntry path="com.blitting.model.IAbstractSingleton"/>
     <classEntry path="com.blitting.model.ObjectPool"/>
+    <classEntry path="com.blitting.model.TimeSpan"/>
+    <classEntry path="com.blitting.model.UUID"/>
     <classEntry path="com.blitting.net.AbstractService"/>
     <classEntry path="com.blitting.net.AbstractSocketService"/>
     <classEntry path="com.blitting.net.XmlService"/>
+    <classEntry path="com.blitting.text.TextFieldFactory"/>
     <classEntry path="com.blitting.time.CallLater"/>
     <classEntry path="com.blitting.time.CountdownTimer"/>
     <classEntry path="com.blitting.time.FunctionTimer"/>
     <classEntry path="com.blitting.time.RandomTimer"/>
-    <classEntry path="com.blitting.constant.ColorPalette"/>
-    <classEntry path="com.blitting.math.Numeric"/>
-    <classEntry path="com.blitting.math.Geometry"/>
-    <classEntry path="com.blitting.math.Statistics"/>
-    <classEntry path="com.blitting.text.TextFieldFactory"/>
-    <classEntry path="com.blitting.model.TimeSpan"/>
-    <classEntry path="com.blitting.model.UUID"/>
-    <classEntry path="com.blitting.model.Color"/>
-    <classEntry path="com.blitting.constant.DataState"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
