@@ -13,11 +13,11 @@ package com.blitting.display
 	use namespace blitting_internal;
 
 	/**
-	 * 
+	 *
 	 * @author jsturges
-	 * 
+	 *
 	 */
-	public class GraphicsRenderer extends AbstractRenderer
+	public class GraphicsRenderer extends AbstractRenderer implements IGraphicsRenderer
 	{
 		include "../core/Version.as";
 

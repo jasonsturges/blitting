@@ -6,17 +6,17 @@
 package com.blitting.display
 {
 	import com.blitting.core.blitting_internal;
-	
+
 	import flash.display.BitmapData;
-	
+
 	use namespace blitting_internal;
 
 	/**
-	 * 
+	 *
 	 * @author jsturges
-	 * 
+	 *
 	 */
-	public class BitmapRenderer extends AbstractRenderer
+	public class BitmapRenderer extends AbstractRenderer implements IBitmapRenderer
 	{
 		include "../core/Version.as";
 
