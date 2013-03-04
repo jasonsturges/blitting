@@ -23,9 +23,9 @@ package com.blitting.display
 	use namespace blitting_internal;
 
 	/**
-	 * 
+	 *
 	 * @author jsturges
-	 * 
+	 *
 	 */
 	public class BufferedViewport extends ResizableViewport
 	{
@@ -109,7 +109,7 @@ package com.blitting.display
 		/**
 		 *
 		 */
-		public function addRenderer(renderer:BitmapRenderer):void
+		public function addRenderer(renderer:IBitmapRenderer):void
 		{
 			if (!renderers)
 				renderers = new Vector.<BitmapRenderer>();
@@ -207,7 +207,7 @@ package com.blitting.display
 		{
 			super.render();
 
-			for each (var renderer:BitmapRenderer in renderers)
+			for each (var renderer:IBitmapRenderer in renderers)
 			{
 				renderer.render(bitmapData);
 			}
