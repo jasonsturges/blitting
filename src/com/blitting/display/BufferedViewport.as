@@ -5,7 +5,6 @@
 //
 package com.blitting.display
 {
-
 	import com.blitting.core.blitting_internal;
 
 	import flash.display.Bitmap;
@@ -94,6 +93,19 @@ package com.blitting.display
 			this.pixelSnapping = pixelSnapping;
 			this.smoothing = smoothing;
 			this.transparent = transparent;
+		}
+
+		override public function initialize():void
+		{
+			super.initialize();
+
+			fillColor = 0xff00ff;
+			pixelSnapping = PixelSnapping.AUTO;
+			smoothing = true;
+			transparent = true;
+
+			renderers = null;
+			scaleOnResize = false;
 		}
 
 		/**
@@ -457,8 +469,12 @@ package com.blitting.display
 		{
 			super.dispose();
 
+			bitmap = null;
+
 			bitmapData.dispose();
 			bitmapData = null;
+
+			renderers = null;
 		}
 
 	}

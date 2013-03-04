@@ -33,7 +33,7 @@ package com.blitting.display
 		/**
 		 * Bind to full stage bounds.
 		 */
-		public var fullStage:Boolean;
+		public var fullStage:Boolean = false;
 
 
 		//------------------------------
@@ -46,6 +46,14 @@ package com.blitting.display
 		public function ResizableViewport()
 		{
 			super();
+		}
+
+		/**
+		 * initialize (IInitializable)
+		 */
+		override public function initialize():void
+		{
+			fullStage = false;
 		}
 
 		/**

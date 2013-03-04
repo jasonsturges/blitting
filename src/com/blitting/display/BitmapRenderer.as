@@ -37,9 +37,23 @@ package com.blitting.display
 			super();
 		}
 
+		override public function initialize():void
+		{
+			super.initialize();
+
+			bitmapData = null;
+		}
+
 		public function render(bitmapData:BitmapData):void
 		{
 			this.bitmapData = bitmapData;
+		}
+
+		override public function dispose():void
+		{
+			super.dispose();
+
+			bitmapData = null;
 		}
 
 	}

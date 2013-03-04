@@ -39,12 +39,12 @@ package com.blitting.display
 		/**
 		 * Rendering engine.
 		 */
-		blitting_internal var blitting:Blitting;
+		blitting_internal static var blitting:Blitting = Blitting.getInstance();
 
 		/**
 		 * Current (total) frame number.
 		 */
-		protected var _frameNumber:uint;
+		protected var _frameNumber:uint = 0;
 
 		/**
 		 * Current (total) frame number.
@@ -57,12 +57,12 @@ package com.blitting.display
 		/**
 		 * Render type / mode of rending.
 		 */
-		public var renderType:String;
+		public var renderType:String = RenderType.ON_INVALIDATION;
 
 		/**
 		 * Total runtime of viewport.
 		 */
-		protected var _runtime:int;
+		protected var _runtime:int = getTimer();
 
 		/**
 		 * Total runtime of viewport.
@@ -83,10 +83,16 @@ package com.blitting.display
 		public function RenderedViewport()
 		{
 			super();
+		}
 
-			blitting = Blitting.getInstance();
+		/**
+		 * initialize (IInitializable)
+		 */
+		override public function initialize():void
+		{
+			super.initialize();
+
 			renderType = RenderType.ON_INVALIDATION;
-
 			_frameNumber = 0;
 			_runtime = getTimer();
 		}

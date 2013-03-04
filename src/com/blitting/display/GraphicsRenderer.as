@@ -40,10 +40,26 @@ package com.blitting.display
 			super();
 		}
 
+		override public function initialize():void
+		{
+			super.initialize();
+
+			displayObject = null;
+			graphics = null;
+		}
+
 		public function render(displayObject:DisplayObject, graphics:Graphics):void
 		{
 			this.displayObject = displayObject;
 			this.graphics = graphics;
+		}
+
+		override public function dispose():void
+		{
+			super.dispose();
+
+			displayObject = null;
+			graphics = null;
 		}
 
 	}

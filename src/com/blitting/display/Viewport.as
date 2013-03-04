@@ -6,8 +6,9 @@
 package com.blitting.display
 {
 	import com.blitting.core.blitting_internal;
+	import com.blitting.lifecycle.IInitializable;
 	import com.blitting.lifecycle.IValidatable;
-	
+
 	import flash.display.StageAlign;
 	import flash.display.StageScaleMode;
 	import flash.geom.Point;
@@ -24,7 +25,7 @@ package com.blitting.display
 	 * 	<li>validate</li>
 	 * </ul>
 	 */
-	public class Viewport extends AbstractViewport implements IValidatable
+	public class Viewport extends AbstractViewport implements IViewport, IInitializable, IValidatable
 	{
 		include "../core/Version.as";
 
@@ -36,18 +37,38 @@ package com.blitting.display
 		/**
 		 * Viewport bounds.
 		 */
-		protected var bounds:Rectangle;
+		private var _bounds:Rectangle = new Rectangle();
+
+		public function get bounds():Rectangle
+		{
+			return _bounds;
+		}
+
+		public function set bounds(value:Rectangle):void
+		{
+			_bounds = value;
+		}
+
+		/**
+		 * Registration point.
+		 */
+		private var _registration:Point = new Point();
+
+		public function get registration():Point
+		{
+			return _registration;
+		}
+
+		public function set registration(value:Point):void
+		{
+			_registration = value;
+		}
 
 		/**
 		 * Whether properties have been invalidated,
 		 * requiring validation.
 		 */
-		protected var invalidated:Boolean;
-
-		/**
-		 * Registration point.
-		 */
-		protected var registrationPoint:Point;
+		protected var invalidated:Boolean = false;
 
 
 		//------------------------------
@@ -60,9 +81,17 @@ package com.blitting.display
 		public function Viewport()
 		{
 			super();
+		}
 
+		/**
+		 * initialize (IInitializable)
+		 */
+		public function initialize():void
+		{
 			bounds = new Rectangle();
-			registrationPoint = new Point(0, 0);
+			registration = new Point();
+
+			invalidated = false;
 		}
 
 		/**
@@ -109,7 +138,7 @@ package com.blitting.display
 			super.dispose();
 
 			bounds = null;
-			registrationPoint = null;
+			registration = null;
 		}
 
 	}

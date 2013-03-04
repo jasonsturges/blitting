@@ -48,8 +48,9 @@ package com.blitting.controls
 		/**
 		 * initialize
 		 */
-		public function initialize():void
+		override public function initialize():void
 		{
+			super.initialize();
 		}
 
 	}

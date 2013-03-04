@@ -68,10 +68,10 @@ package com.blitting.display
 		{
 			super.addedToStageHandler(event);
 
-			initialize();
+			initialize3d();
 		}
 
-		protected function initialize():void
+		protected function initialize3d():void
 		{
 			stage3dAvailable = ApplicationDomain.currentDomain.hasDefinition("flash.display.Stage3D");
 
