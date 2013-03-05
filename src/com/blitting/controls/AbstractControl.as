@@ -16,6 +16,7 @@ package com.blitting.controls
 		 */
 		private var _value:Object;
 
+		[Inspectable]
 		public function get value():Object
 		{
 			return _value;
@@ -51,6 +52,8 @@ package com.blitting.controls
 		override public function initialize():void
 		{
 			super.initialize();
+
+			value = null;
 		}
 
 	}
