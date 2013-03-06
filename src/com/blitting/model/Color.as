@@ -200,11 +200,23 @@ package com.blitting.model
 		 * @param red    8-bit Red.
 		 * @param green  8-bit Green.
 		 * @param blue   8-bit Blue.
-		 * @return       32-bit Color unsigned integer.
+		 * @return       32-bit ARGB unsigned integer.
 		 */
 		public static function getARGB(alpha:uint, red:uint, green:uint, blue:uint):uint
 		{
 			return alpha << 24 | red << 16 | green << 8 | blue;
+		}
+
+		/**
+		 * Get 32-bit ARGB by combining 8-bit Alpha with 24-bit RGB.
+		 *
+		 * @param alpha  8-bit Alpha.
+		 * @param rgb    24-bit RGB.
+		 * @return       32-bit ARGB unsigned integer.
+		 */
+		public static function getARGBFromAlphaAndRGB(rgb:uint, alpha:uint=0xff):uint
+		{
+			return (alpha << 24) + rgb;
 		}
 
 		/**
@@ -219,7 +231,7 @@ package com.blitting.model
 		 * @param green  8-bit Green.
 		 * @param blue   8-bit Blue.
 		 * @param alpha  8-bit Alpha.
-		 * @return       32-bit Color unsigned integer.
+		 * @return       32-bit RGBA unsigned integer.
 		 */
 		public static function getRGBA(red:uint, green:uint, blue:uint, alpha:uint):uint
 		{
@@ -254,7 +266,7 @@ package com.blitting.model
 		 * @param red    8-bit Red.
 		 * @param green  8-bit Green.
 		 * @param blue   8-bit Blue.
-		 * @return       32-bit Color unsigned integer.
+		 * @return       32-bit RGB unsigned integer.
 		 */
 		public static function getRGB(red:uint, green:uint, blue:uint):uint
 		{
