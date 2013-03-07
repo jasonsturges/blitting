@@ -39,7 +39,7 @@ package com.blitting.display
 		/**
 		 * Rendering engine.
 		 */
-		blitting_internal static var blitting:Blitting = Blitting.getInstance();
+		blitting_internal static const blitting:Blitting = Blitting.getInstance();
 
 		/**
 		 * Current (total) frame number.
