@@ -46,7 +46,7 @@ package com.blitting.display
 		protected var bitmap:Bitmap;
 
 		/**
-		 *
+		 * 32-bit ARGB uint color.
 		 */
 		protected var fillColor:uint;
 
