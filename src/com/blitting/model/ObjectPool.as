@@ -57,8 +57,14 @@ package com.blitting.model
 				throw new Error("ObjectPool is a singleton and can only be accessed through ObjectPool.getInstance()");
 		}
 
+		/**
+		 * Construct an instance of an object by specifying class type.
+		 */
 		public function construct(type:Class):Object
 		{
+			if (type == null)
+				return null;
+
 			if (!(type in pool))
 				pool[type] = new Vector.<Object>;
 
@@ -77,8 +83,14 @@ package com.blitting.model
 			return new type();
 		}
 
+		/**
+		 *
+		 */
 		public function dispose(object:Object, type:Class=null):void
 		{
+			if (object == null)
+				return;
+
 			if (!type)
 			{
 				var qualifiedName:String = getQualifiedClassName(object);
