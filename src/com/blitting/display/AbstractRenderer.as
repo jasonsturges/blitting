@@ -21,7 +21,7 @@ package com.blitting.display
 	 * @author jsturges
 	 *
 	 */
-	public class AbstractRenderer extends EventDispatcher implements IViewport, IInitializable, IDisposable
+	public class AbstractRenderer extends EventDispatcher implements IViewport, IRenderer, IInitializable, IDisposable
 	{
 		include "../core/Version.as";
 
