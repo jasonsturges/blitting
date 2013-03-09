@@ -6,7 +6,7 @@ package com.blitting.display
 	public interface IGraphicsRenderer
 	{
 
-		function render(displayObject:DisplayObject, graphics:Graphics):void;
+		function render(graphics:Graphics, displayObject:DisplayObject=null):void;
 
 	}
 }

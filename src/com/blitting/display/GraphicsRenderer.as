@@ -48,7 +48,7 @@ package com.blitting.display
 			graphics = null;
 		}
 
-		public function render(displayObject:DisplayObject, graphics:Graphics):void
+		public function render(graphics:Graphics, displayObject:DisplayObject=null):void
 		{
 			this.displayObject = displayObject;
 			this.graphics = graphics;
