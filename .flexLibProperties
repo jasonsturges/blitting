@@ -21,6 +21,7 @@
     <classEntry path="com.blitting.display.GraphicsRenderer"/>
     <classEntry path="com.blitting.display.IBitmapRenderer"/>
     <classEntry path="com.blitting.display.IGraphicsRenderer"/>
+    <classEntry path="com.blitting.display.IViewport"/>
     <classEntry path="com.blitting.display.RenderedViewport"/>
     <classEntry path="com.blitting.display.ResizableViewport"/>
     <classEntry path="com.blitting.display.Viewport"/>
