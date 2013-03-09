@@ -21,6 +21,7 @@
     <classEntry path="com.blitting.display.GraphicsRenderer"/>
     <classEntry path="com.blitting.display.IBitmapRenderer"/>
     <classEntry path="com.blitting.display.IGraphicsRenderer"/>
+    <classEntry path="com.blitting.display.IRenderer"/>
     <classEntry path="com.blitting.display.IViewport"/>
     <classEntry path="com.blitting.display.RenderedViewport"/>
     <classEntry path="com.blitting.display.ResizableViewport"/>
@@ -42,6 +43,7 @@
     <classEntry path="com.blitting.model.Color"/>
     <classEntry path="com.blitting.model.IAbstractFactory"/>
     <classEntry path="com.blitting.model.IAbstractSingleton"/>
+    <classEntry path="com.blitting.model.IState"/>
     <classEntry path="com.blitting.model.ObjectPool"/>
     <classEntry path="com.blitting.model.TimeSpan"/>
     <classEntry path="com.blitting.model.UUID"/>
