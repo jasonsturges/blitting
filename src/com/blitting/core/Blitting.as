@@ -85,8 +85,8 @@ package com.blitting.core
 		private var _shapeRenderer:Shape;
 
 		/**
-		 * Return graphics shape renderer with
-		 * clear graphics and empty filters.
+		 * Return graphics shape renderer with clear graphics,
+		 * reset fill and line style settings, and empty filters.
 		 */
 		public function get shapeRenderer():Shape
 		{
