@@ -55,6 +55,8 @@
     <classEntry path="com.blitting.time.CountdownTimer"/>
     <classEntry path="com.blitting.time.FunctionTimer"/>
     <classEntry path="com.blitting.time.RandomTimer"/>
+    <classEntry path="com.blitting.display.Context3dRenderer"/>
+    <classEntry path="com.blitting.display.IContext3dRenderer"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
