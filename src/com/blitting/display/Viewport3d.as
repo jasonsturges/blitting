@@ -64,7 +64,7 @@ package com.blitting.display
 		 * @param fillColor 32-bit ARGB uint color.
 		 * @param context3dRenderMode
 		 */
-		public function Viewport3d(fillColor:uint, context3dRenderMode:String=Context3DRenderMode.AUTO)
+		public function Viewport3d(fillColor:uint=0xff000000, context3dRenderMode:String="auto")
 		{
 			super();
 
