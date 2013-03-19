@@ -80,16 +80,15 @@ package com.blitting.display
 		 */
 		protected function fullScreen(interactive:Boolean=true):void
 		{
-			if (!stage.allowsFullScreen)
-				return;
-
 			switch (interactive)
 			{
 				case true:
-					stage.displayState = StageDisplayState.FULL_SCREEN_INTERACTIVE;
+					if (stage.allowsFullScreenInteractive)
+						stage.displayState = StageDisplayState.FULL_SCREEN_INTERACTIVE;
 					break;
 				case false:
-					stage.displayState = StageDisplayState.FULL_SCREEN;
+					if (stage.allowsFullScreen)
+						stage.displayState = StageDisplayState.FULL_SCREEN;
 					break;
 			}
 		}
