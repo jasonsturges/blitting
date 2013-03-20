@@ -21,7 +21,7 @@ package com.blitting.display
 	 * @author jsturges
 	 *
 	 */
-	public class AbstractRenderer extends EventDispatcher implements IViewport, IRenderer, IInitializable, IDisposable
+	public class AbstractRenderer extends EventDispatcher implements IRenderer, IViewport, IInitializable, IDisposable
 	{
 		include "../core/Version.as";
 
@@ -31,7 +31,7 @@ package com.blitting.display
 		//------------------------------
 
 		/**
-		 * Viewport bounds.
+		 * Viewport bounds (IViewport)
 		 */
 		private var _bounds:Rectangle = new Rectangle();
 
@@ -46,7 +46,7 @@ package com.blitting.display
 		}
 
 		/**
-		 * Registration point.
+		 * Registration point (IViewport)
 		 */
 		private var _registration:Point = new Point();
 

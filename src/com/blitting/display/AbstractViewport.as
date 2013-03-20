@@ -7,26 +7,69 @@ package com.blitting.display
 {
 	import com.blitting.core.blitting_internal;
 	import com.blitting.lifecycle.IDisposable;
+	import com.blitting.lifecycle.IInitializable;
 
-	import flash.display.DisplayObject;
 	import flash.display.Sprite;
-	import flash.events.Event;
+	import flash.geom.Point;
+	import flash.geom.Rectangle;
 
 	use namespace blitting_internal;
 
 	/**
-	 * Provides base lifecycle for views, including
-	 * IDisposable lifecycle.
+	 * bounds, registration point
+	 *
+	 * Provides base lifecycle for views.
+	 *
+	 * Implements IInitializable lifecycle
 	 *
 	 * <ul>
-	 * 	<li>added to stage</li>
-	 * 	<li>removed from stage</li>
-	 * 	<li>dispose</li>
+	 * 	<li>initialize()</li>
+	 * </ul>
+	 *
+	 * Implements IDisposable lifecycle
+	 *
+	 * <ul>
+	 * 	<li>dispose()</li>
 	 * </ul>
 	 */
-	public class AbstractViewport extends Sprite implements IDisposable
+	public class AbstractViewport extends Sprite implements IViewport, IInitializable, IDisposable
 	{
 		include "../core/Version.as";
+
+
+		//------------------------------
+		//  model
+		//------------------------------
+
+		/**
+		 * Viewport bounds (IViewport)
+		 */
+		private var _bounds:Rectangle = new Rectangle();
+
+		public function get bounds():Rectangle
+		{
+			return _bounds;
+		}
+
+		public function set bounds(value:Rectangle):void
+		{
+			_bounds = value;
+		}
+
+		/**
+		 * Registration point (IViewport)
+		 */
+		private var _registration:Point = new Point();
+
+		public function get registration():Point
+		{
+			return _registration;
+		}
+
+		public function set registration(value:Point):void
+		{
+			_registration = value;
+		}
 
 
 		//------------------------------
@@ -36,36 +79,18 @@ package com.blitting.display
 		/**
 		 * constructor
 		 */
-		public function AbstractViewport(fullStage:Boolean=false)
+		public function AbstractViewport()
 		{
 			super();
-
-			// add added to stage listener.
-			addEventListener(Event.ADDED_TO_STAGE, addedToStageHandler);
 		}
 
 		/**
-		 * addedToStageHandler
+		 * initialize (IInitializable)
 		 */
-		protected function addedToStageHandler(event:Event):void
+		public function initialize():void
 		{
-			// remove added to stage event listener.
-			removeEventListener(Event.ADDED_TO_STAGE, addedToStageHandler);
-
-			// add removed from stage listener.
-			addEventListener(Event.REMOVED_FROM_STAGE, removedFromStageHandler);
-		}
-
-		/**
-		 * removedFromStageHandler
-		 */
-		protected function removedFromStageHandler(event:Event):void
-		{
-			// remove removed from stage event listener
-			removeEventListener(Event.REMOVED_FROM_STAGE, removedFromStageHandler);
-
-			// add added to stage event listener
-			addEventListener(Event.ADDED_TO_STAGE, addedToStageHandler);
+			bounds = new Rectangle();
+			registration = new Point();
 		}
 
 		/**
@@ -73,20 +98,8 @@ package com.blitting.display
 		 */
 		public function dispose():void
 		{
-			// remove children
-			while (numChildren > 0)
-			{
-				var displayObject:DisplayObject = removeChildAt(0);
-
-				if (displayObject is IDisposable)
-					IDisposable(displayObject).dispose();
-			}
-
-			// remove added to stage event listener
-			removeEventListener(Event.ADDED_TO_STAGE, addedToStageHandler);
-
-			// remove removed from stage event listener
-			removeEventListener(Event.REMOVED_FROM_STAGE, removedFromStageHandler);
+			bounds = null;
+			registration = null;
 		}
 
 	}
