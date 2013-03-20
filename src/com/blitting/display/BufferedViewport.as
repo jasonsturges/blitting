@@ -9,8 +9,10 @@ package com.blitting.display
 
 	import flash.display.Bitmap;
 	import flash.display.BitmapData;
+	import flash.display.Graphics;
 	import flash.display.IBitmapDrawable;
 	import flash.display.PixelSnapping;
+	import flash.display.Shape;
 	import flash.events.Event;
 	import flash.filters.BitmapFilter;
 	import flash.geom.ColorTransform;
@@ -58,7 +60,7 @@ package com.blitting.display
 		/**
 		 *
 		 */
-		protected var renderers:Vector.<BitmapRenderer>;
+		protected var renderers:Vector.<IRenderer>;
 
 		/**
 		 *
@@ -121,10 +123,10 @@ package com.blitting.display
 		/**
 		 *
 		 */
-		public function addRenderer(renderer:IBitmapRenderer):void
+		public function addRenderer(renderer:IRenderer):void
 		{
 			if (!renderers)
-				renderers = new Vector.<BitmapRenderer>();
+				renderers = new Vector.<IRenderer>();
 
 			renderers.push(renderer);
 		}
@@ -219,9 +221,19 @@ package com.blitting.display
 		{
 			super.render();
 
-			for each (var renderer:IBitmapRenderer in renderers)
+			for each (var renderer:IRenderer in renderers)
 			{
-				renderer.render(bitmapData);
+				if (renderer is IBitmapRenderer)
+				{
+					IBitmapRenderer(renderer).render(bitmapData);
+				}
+				else if (renderer is IGraphicsRenderer)
+				{
+					var s:Shape = blitting.shapeRenderer;
+					var g:Graphics = s.graphics;
+					IGraphicsRenderer(renderer).render(g, s);
+					draw(s);
+				}
 			}
 		}
 
