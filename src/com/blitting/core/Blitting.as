@@ -122,6 +122,17 @@ package com.blitting.core
 			return getTimer() - _runtime;
 		}
 
+		/**
+		 * Time since last frame render
+		 */
+		protected var _deltaTime:uint = 0;
+
+		public function get deltaTime():int
+		{
+			return getTimer() - _deltaTime;
+		}
+
+
 		//------------------------------
 		//  lifecycle
 		//------------------------------
@@ -152,6 +163,9 @@ package com.blitting.core
 		 */
 		public function start():void
 		{
+			// start times
+			_runtime = _deltaTime = getTimer();
+
 			// add frame constructed and exit frame listeners to graphics renderer
 			_shapeRenderer.addEventListener(Event.FRAME_CONSTRUCTED, frameConstructedHandler);
 			_shapeRenderer.addEventListener(Event.EXIT_FRAME, exitFrameHandler);
@@ -270,6 +284,8 @@ package com.blitting.core
 				if (renderPipeline[renderer] == RenderType.ONCE)
 					delete renderPipeline[renderer];
 			}
+
+			_deltaTime = getTimer();
 		}
 
 		/**
