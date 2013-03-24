@@ -58,6 +58,8 @@ package com.blitting.display
 		{
 			super();
 
+			focusRect = mouseEnabled = mouseChildren = tabEnabled = tabChildren = false;
+
 			// add added to stage listener.
 			addEventListener(Event.ADDED_TO_STAGE, addedToStageHandler);
 		}
@@ -70,6 +72,7 @@ package com.blitting.display
 			super.initialize();
 
 			invalidated = false;
+			focusRect = mouseEnabled = mouseChildren = tabEnabled = tabChildren = false;
 
 			// add added to stage listener.
 			addEventListener(Event.ADDED_TO_STAGE, addedToStageHandler);
