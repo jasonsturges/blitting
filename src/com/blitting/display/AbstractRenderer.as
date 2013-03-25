@@ -5,6 +5,7 @@
 //
 package com.blitting.display
 {
+	import com.blitting.core.Blitting;
 	import com.blitting.core.blitting_internal;
 	import com.blitting.lifecycle.IDisposable;
 	import com.blitting.lifecycle.IInitializable;
@@ -29,6 +30,11 @@ package com.blitting.display
 		//------------------------------
 		//  model
 		//------------------------------
+
+		/**
+		 * Rendering engine.
+		 */
+		blitting_internal static const blitting:Blitting = Blitting.getInstance();
 
 		/**
 		 * Viewport bounds (IViewport)
