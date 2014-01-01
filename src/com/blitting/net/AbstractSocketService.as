@@ -48,7 +48,7 @@ package com.blitting.net
 			socket.addEventListener(SecurityErrorEvent.SECURITY_ERROR, socketSecurityErrorHandler);
 		}
 
-		public function connect(hostname:String=null, port:uint=NaN, requestMessage:String=null):void
+		public function connect(hostname:String=null, port:uint=80, requestMessage:String=null):void
 		{
 			if (hostname)
 				this.hostname = hostname;
