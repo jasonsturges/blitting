@@ -184,7 +184,7 @@ package com.blitting.core
 		 */
 		public function addInvalidation(validatable:IValidatable, validationType:String=InvalidationType.SELF):void
 		{
-			validationPipeline[validatable] = validatable;
+			validationPipeline[validatable] = validationType;
 		}
 
 		/**
