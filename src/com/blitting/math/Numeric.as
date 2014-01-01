@@ -100,8 +100,8 @@ package com.blitting.math
 		 *
 		 * http://kb2.adobe.com/cps/139/tn_13989.html
 		 *
-		 * @param Number to be rounded.
-		 * @param Precision decimal places.
+		 * @param n Number to be rounded.
+		 * @param precision Decimal places.
 		 * @return Rounded Number
 		 *
 		 * example
@@ -117,10 +117,10 @@ package com.blitting.math
 		 *    trace(MathUtil.roundDecimal(0.9 - 1.123, 3)); // -0.223
 		 * </listing>
 		 */
-		public static function roundDecimal(num:Number, precision:Number):Number
+		public static function roundDecimal(n:Number, precision:Number):Number
 		{
 			var factor:int = Math.pow(10, precision);
-			return (Math.round(num * factor) / factor);
+			return (Math.round(n * factor) / factor);
 		}
 
 		/**
