@@ -53,6 +53,7 @@ package com.blitting.net
 		 *
 		 * @param url
 		 * @param data String or URLVariables
+		 * @param requestMethod URL request method
 		 */
 		public function load(url:String=null, data:Object=null, requestMethod:String=URLRequestMethod.GET):void
 		{
