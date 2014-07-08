@@ -1,19 +1,16 @@
-package com.blitting.error
-{
+package com.blitting.error {
 
-	public class BlittingInvalidOperation extends Error
-	{
-		include "../core/Version.as";
+public class BlittingInvalidOperation extends Error {
+    include "../core/Version.as";
 
 
-		//------------------------------
-		//  lifecycle
-		//------------------------------
+    //------------------------------
+    //  lifecycle
+    //------------------------------
 
-		public function BlittingInvalidOperation(message:*="", id:*=0)
-		{
-			super(message, id);
-		}
+    public function BlittingInvalidOperation(message:* = "", id:* = 0) {
+        super(message, id);
+    }
 
-	}
+}
 }

@@ -1,60 +1,54 @@
-package com.blitting.controls
-{
-	import com.blitting.core.RenderType;
-	import com.blitting.display.BufferedViewport;
-	import com.blitting.lifecycle.IInitializable;
+package com.blitting.controls {
+import com.blitting.core.RenderType;
+import com.blitting.display.BufferedViewport;
+import com.blitting.lifecycle.IInitializable;
 
-	public class AbstractControl extends BufferedViewport implements IControl, IInitializable
-	{
+public class AbstractControl extends BufferedViewport implements IControl, IInitializable {
 
-		//------------------------------
-		//  model
-		//------------------------------
+    //------------------------------
+    //  model
+    //------------------------------
 
-		/**
-		 * value
-		 */
-		private var _value:Object;
+    /**
+     * value
+     */
+    private var _value:Object;
 
-		[Inspectable]
-		public function get value():Object
-		{
-			return _value;
-		}
+    [Inspectable]
+    public function get value():Object {
+        return _value;
+    }
 
-		public function set value(value:Object):void
-		{
-			if (_value == value)
-				return;
+    public function set value(value:Object):void {
+        if (_value == value)
+            return;
 
-			_value = value;
-			invalidate();
-		}
+        _value = value;
+        invalidate();
+    }
 
 
-		//------------------------------
-		//  lifecycle
-		//------------------------------
+    //------------------------------
+    //  lifecycle
+    //------------------------------
 
-		/**
-		 * constructor
-		 */
-		public function AbstractControl()
-		{
-			super();
+    /**
+     * constructor
+     */
+    public function AbstractControl() {
+        super();
 
-			renderType = RenderType.ON_INVALIDATION;
-		}
+        renderType = RenderType.ON_INVALIDATION;
+    }
 
-		/**
-		 * initialize
-		 */
-		override public function initialize():void
-		{
-			super.initialize();
+    /**
+     * initialize
+     */
+    override public function initialize():void {
+        super.initialize();
 
-			value = null;
-		}
+        value = null;
+    }
 
-	}
+}
 }

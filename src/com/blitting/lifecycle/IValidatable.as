@@ -3,15 +3,13 @@
 //
 //  Created by Jason Sturges.
 //
-package com.blitting.lifecycle
-{
+package com.blitting.lifecycle {
 
-	public interface IValidatable
-	{
+public interface IValidatable {
 
-		function invalidate():void;
+    function invalidate():void;
 
-		function validate():void;
+    function validate():void;
 
-	}
+}
 }

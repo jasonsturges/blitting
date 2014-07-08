@@ -1,19 +1,16 @@
-package com.blitting.error
-{
+package com.blitting.error {
 
-	public class BlittingRenderError extends Error
-	{
-		include "../core/Version.as";
+public class BlittingRenderError extends Error {
+    include "../core/Version.as";
 
 
-		//------------------------------
-		//  lifecycle
-		//------------------------------
+    //------------------------------
+    //  lifecycle
+    //------------------------------
 
-		public function BlittingRenderError(message:*="", id:*=0)
-		{
-			super(message, id);
-		}
+    public function BlittingRenderError(message:* = "", id:* = 0) {
+        super(message, id);
+    }
 
-	}
+}
 }

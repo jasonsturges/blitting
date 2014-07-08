@@ -1,11 +1,10 @@
-package com.blitting.model
-{
+package com.blitting.model {
 
-	public interface IState
-	{
+public interface IState {
 
-		function get state():String;
-		function set state(value:String):void;
+    function get state():String;
 
-	}
+    function set state(value:String):void;
+
+}
 }

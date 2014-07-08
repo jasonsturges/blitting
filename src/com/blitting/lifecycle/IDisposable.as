@@ -3,20 +3,18 @@
 //
 //  Created by Jason Sturges.
 //
-package com.blitting.lifecycle
-{
+package com.blitting.lifecycle {
 
-	/**
-	 * Implements <code>dispose()</code> interface as class
-	 * destructor.
-	 *
-	 * @author jsturges
-	 *
-	 */
-	public interface IDisposable
-	{
+/**
+ * Implements <code>dispose()</code> interface as class
+ * destructor.
+ *
+ * @author jsturges
+ *
+ */
+public interface IDisposable {
 
-		function dispose():void;
+    function dispose():void;
 
-	}
+}
 }

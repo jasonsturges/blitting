@@ -1,7 +1,5 @@
-package com.blitting.model
-{
-	public interface IAbstractFactory
-	{
-		
-	}
+package com.blitting.model {
+public interface IAbstractFactory {
+
+}
 }

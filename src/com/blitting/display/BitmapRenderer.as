@@ -3,58 +3,52 @@
 //
 //  Created by Jason Sturges.
 //
-package com.blitting.display
-{
-	import com.blitting.core.blitting_internal;
+package com.blitting.display {
+import com.blitting.core.blitting_internal;
 
-	import flash.display.BitmapData;
+import flash.display.BitmapData;
 
-	use namespace blitting_internal;
+use namespace blitting_internal;
 
-	/**
-	 *
-	 * @author jsturges
-	 *
-	 */
-	public class BitmapRenderer extends AbstractRenderer implements IBitmapRenderer
-	{
-		include "../core/Version.as";
+/**
+ *
+ * @author jsturges
+ *
+ */
+public class BitmapRenderer extends AbstractRenderer implements IBitmapRenderer {
+    include "../core/Version.as";
 
 
-		//------------------------------
-		//  model
-		//------------------------------
+    //------------------------------
+    //  model
+    //------------------------------
 
-		protected var bitmapData:BitmapData;
+    protected var bitmapData:BitmapData;
 
 
-		//------------------------------
-		//  lifecycle
-		//------------------------------
+    //------------------------------
+    //  lifecycle
+    //------------------------------
 
-		public function BitmapRenderer()
-		{
-			super();
-		}
+    public function BitmapRenderer() {
+        super();
+    }
 
-		override public function initialize():void
-		{
-			super.initialize();
+    override public function initialize():void {
+        super.initialize();
 
-			bitmapData = null;
-		}
+        bitmapData = null;
+    }
 
-		public function render(bitmapData:BitmapData):void
-		{
-			this.bitmapData = bitmapData;
-		}
+    public function render(bitmapData:BitmapData):void {
+        this.bitmapData = bitmapData;
+    }
 
-		override public function dispose():void
-		{
-			super.dispose();
+    override public function dispose():void {
+        super.dispose();
 
-			bitmapData = null;
-		}
+        bitmapData = null;
+    }
 
-	}
+}
 }

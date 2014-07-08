@@ -3,21 +3,18 @@
 //
 //  Created by Jason Sturges.
 //
-package com.blitting.math
-{
+package com.blitting.math {
 
-	public class Statistics
-	{
-		include "../core/Version.as";
+public class Statistics {
+    include "../core/Version.as";
 
 
-		public static function probability(occured:Number, outcomes:Number):Boolean
-		{
-			if (Math.random() * outcomes < occured)
-				return true;
+    public static function probability(occured:Number, outcomes:Number):Boolean {
+        if (Math.random() * outcomes < occured)
+            return true;
 
-			return false;
-		}
+        return false;
+    }
 
-	}
+}
 }

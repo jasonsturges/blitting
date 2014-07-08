@@ -3,66 +3,60 @@
 //
 //  Created by Jason Sturges.
 //
-package com.blitting.time
-{
-	import flash.events.TimerEvent;
+package com.blitting.time {
+import flash.events.TimerEvent;
 
-	/**
-	 * Extension of RandomTimer, executing functions
-	 * at random intervals.
-	 */
-	public class FunctionTimer extends RandomTimer
-	{
-		include "../core/Version.as";
-		
-		
-		//------------------------------
-		//  model
-		//------------------------------
-
-		/** Functions to be executed on timer event. */
-		private var _functions:Vector.<Function>;
+/**
+ * Extension of RandomTimer, executing functions
+ * at random intervals.
+ */
+public class FunctionTimer extends RandomTimer {
+    include "../core/Version.as";
 
 
-		//------------------------------
-		//  lifecycle
-		//------------------------------
+    //------------------------------
+    //  model
+    //------------------------------
 
-		/**
-		 * constructor, as RandomTimer.
-		 *
-		 * @param min
-		 * @param max
-		 * @param repeatCount
-		 */
-		public function FunctionTimer(min:Number, max:Number, repeatCount:int=0)
-		{
-			super(min, max, repeatCount);
+    /** Functions to be executed on timer event. */
+    private var _functions:Vector.<Function>;
 
-			_functions = new Vector.<Function>();
-		}
 
-		/**
-		 * Add a function to be executed on timer event.
-		 */
-		public function addFunction(f:Function):void
-		{
-			_functions.push(f);
-		}
+    //------------------------------
+    //  lifecycle
+    //------------------------------
 
-		/**
-		 * Execute function on timer event.@param event
-		 */
-		override protected function timerHandler(event:TimerEvent):void
-		{
-			super.timerHandler(event);
+    /**
+     * constructor, as RandomTimer.
+     *
+     * @param min
+     * @param max
+     * @param repeatCount
+     */
+    public function FunctionTimer(min:Number, max:Number, repeatCount:int = 0) {
+        super(min, max, repeatCount);
 
-			for each (var f:Function in _functions)
-			{
-				if (f != null)
-					f();
-			}
-		}
+        _functions = new Vector.<Function>();
+    }
 
-	}
+    /**
+     * Add a function to be executed on timer event.
+     */
+    public function addFunction(f:Function):void {
+        _functions.push(f);
+    }
+
+    /**
+     * Execute function on timer event.@param event
+     */
+    override protected function timerHandler(event:TimerEvent):void {
+        super.timerHandler(event);
+
+        for each (var f:Function in _functions) {
+            if (f != null)
+                f();
+        }
+    }
+
+}
 }
