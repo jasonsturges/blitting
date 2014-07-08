@@ -4,7 +4,6 @@ import com.blitting.lifecycle.IInitializable;
 import flash.net.registerClassAlias;
 
 [RemoteClass(alias="com.blitting.time.TimeSpan")]
-[Bindable]
 public class TimeSpan implements IInitializable {
     include "../core/Version.as";
 

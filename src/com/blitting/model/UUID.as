@@ -11,7 +11,6 @@ import flash.net.registerClassAlias;
 import flash.utils.ByteArray;
 
 [RemoteClass(alias="com.blitting.model.UUID")]
-[Bindable]
 /**
  * Universal unique identifier (UUID) akin to
  * globally unique identifier (GUID).

@@ -10,7 +10,6 @@ import com.blitting.lifecycle.IInitializable;
 import flash.net.registerClassAlias;
 
 [RemoteClass(alias="com.blitting.model.Color")]
-[Bindable]
 /**
  * Color structure.
  */
