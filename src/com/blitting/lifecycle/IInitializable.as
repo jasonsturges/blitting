@@ -3,13 +3,11 @@
 //
 //  Created by Jason Sturges.
 //
-package com.blitting.lifecycle
-{
+package com.blitting.lifecycle {
 
-	public interface IInitializable
-	{
+public interface IInitializable {
 
-		function initialize():void;
+    function initialize():void;
 
-	}
+}
 }

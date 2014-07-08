@@ -3,52 +3,48 @@
 //
 //  Created by Jason Sturges
 //
-package com.blitting.event
-{
-	import com.blitting.model.IAbstractSingleton;
+package com.blitting.event {
+import com.blitting.model.IAbstractSingleton;
 
-	import flash.events.EventDispatcher;
+import flash.events.EventDispatcher;
 
-	public class EventPipeline extends EventDispatcher implements IAbstractSingleton
-	{
-		include "../core/Version.as";
+public class EventPipeline extends EventDispatcher implements IAbstractSingleton {
+    include "../core/Version.as";
 
 
-		//------------------------------
-		//  singleton instance
-		//------------------------------
+    //------------------------------
+    //  singleton instance
+    //------------------------------
 
-		/**
-		 * Singleton instance.
-		 */
-		private static var _instance:EventPipeline = new EventPipeline();
+    /**
+     * Singleton instance.
+     */
+    private static var _instance:EventPipeline = new EventPipeline();
 
-		/**
-		 * Return singleton instance.
-		 */
-		public static function getInstance():EventPipeline
-		{
-			return _instance;
-		}
-
-
-		//------------------------------
-		//  model
-		//------------------------------
+    /**
+     * Return singleton instance.
+     */
+    public static function getInstance():EventPipeline {
+        return _instance;
+    }
 
 
-		//------------------------------
-		//  lifecycle
-		//------------------------------
+    //------------------------------
+    //  model
+    //------------------------------
 
-		/**
-		 * Constructor as singleton enforcer.
-		 */
-		public function EventPipeline()
-		{
-			if (_instance)
-				throw new Error("EventPipeline is a singleton and can only be accessed through EventPipeline.getInstance()");
-		}
 
-	}
+    //------------------------------
+    //  lifecycle
+    //------------------------------
+
+    /**
+     * Constructor as singleton enforcer.
+     */
+    public function EventPipeline() {
+        if (_instance)
+            throw new Error("EventPipeline is a singleton and can only be accessed through EventPipeline.getInstance()");
+    }
+
+}
 }

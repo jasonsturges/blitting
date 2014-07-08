@@ -3,94 +3,86 @@
 //
 //  Created by Jason Sturges.
 //
-package com.blitting.net
-{
-	import com.blitting.lifecycle.IDisposable;
+package com.blitting.net {
+import com.blitting.lifecycle.IDisposable;
 
-	import flash.events.Event;
-	import flash.events.EventDispatcher;
-	import flash.events.IOErrorEvent;
-	import flash.events.SecurityErrorEvent;
-	import flash.net.URLLoader;
-	import flash.net.URLRequest;
-	import flash.net.URLRequestMethod;
+import flash.events.Event;
+import flash.events.EventDispatcher;
+import flash.events.IOErrorEvent;
+import flash.events.SecurityErrorEvent;
+import flash.net.URLLoader;
+import flash.net.URLRequest;
+import flash.net.URLRequestMethod;
 
-	public class AbstractService extends EventDispatcher implements IDisposable
-	{
-		include "../core/Version.as";
+public class AbstractService extends EventDispatcher implements IDisposable {
+    include "../core/Version.as";
 
 
-		//------------------------------
-		//  model
-		//------------------------------
+    //------------------------------
+    //  model
+    //------------------------------
 
-		public var data:Object;
+    public var data:Object;
 
-		public var requestMethod:String = URLRequestMethod.GET;
+    public var requestMethod:String = URLRequestMethod.GET;
 
-		public var url:String;
+    public var url:String;
 
-		protected var urlLoader:URLLoader;
+    protected var urlLoader:URLLoader;
 
-		protected var urlRequest:URLRequest;
+    protected var urlRequest:URLRequest;
 
 
-		//------------------------------
-		//  lifecycle
-		//------------------------------
+    //------------------------------
+    //  lifecycle
+    //------------------------------
 
-		public function AbstractService()
-		{
-			super();
+    public function AbstractService() {
+        super();
 
-			urlLoader = new URLLoader();
-			urlLoader.addEventListener(Event.COMPLETE, completeHandler);
-			urlLoader.addEventListener(SecurityErrorEvent.SECURITY_ERROR, securityErrorHandler);
-			urlLoader.addEventListener(IOErrorEvent.IO_ERROR, ioErrorHandler);
-		}
+        urlLoader = new URLLoader();
+        urlLoader.addEventListener(Event.COMPLETE, completeHandler);
+        urlLoader.addEventListener(SecurityErrorEvent.SECURITY_ERROR, securityErrorHandler);
+        urlLoader.addEventListener(IOErrorEvent.IO_ERROR, ioErrorHandler);
+    }
 
-		/**
-		 *
-		 * @param url
-		 * @param data String or URLVariables
-		 * @param requestMethod URL request method
-		 */
-		public function load(url:String=null, data:Object=null, requestMethod:String=URLRequestMethod.GET):void
-		{
-			if (url)
-				this.url = url;
+    /**
+     *
+     * @param url
+     * @param data String or URLVariables
+     * @param requestMethod URL request method
+     */
+    public function load(url:String = null, data:Object = null, requestMethod:String = URLRequestMethod.GET):void {
+        if (url)
+            this.url = url;
 
-			if (data)
-				this.data = data;
+        if (data)
+            this.data = data;
 
-			if (requestMethod)
-				this.requestMethod = requestMethod;
+        if (requestMethod)
+            this.requestMethod = requestMethod;
 
-			urlRequest = new URLRequest(this.url);
-			urlRequest.data = this.data;
-			urlRequest.method = this.requestMethod;
+        urlRequest = new URLRequest(this.url);
+        urlRequest.data = this.data;
+        urlRequest.method = this.requestMethod;
 
-			urlLoader.load(urlRequest);
-		}
+        urlLoader.load(urlRequest);
+    }
 
-		protected function completeHandler(event:Event):void
-		{
-		}
+    protected function completeHandler(event:Event):void {
+    }
 
-		protected function ioErrorHandler(event:IOErrorEvent):void
-		{
-		}
+    protected function ioErrorHandler(event:IOErrorEvent):void {
+    }
 
-		protected function securityErrorHandler(event:SecurityErrorEvent):void
-		{
-		}
+    protected function securityErrorHandler(event:SecurityErrorEvent):void {
+    }
 
-		public function dispose():void
-		{
-			urlLoader.removeEventListener(Event.COMPLETE, completeHandler);
-			urlLoader.removeEventListener(SecurityErrorEvent.SECURITY_ERROR, securityErrorHandler);
-			urlLoader.removeEventListener(IOErrorEvent.IO_ERROR, ioErrorHandler);
-		}
+    public function dispose():void {
+        urlLoader.removeEventListener(Event.COMPLETE, completeHandler);
+        urlLoader.removeEventListener(SecurityErrorEvent.SECURITY_ERROR, securityErrorHandler);
+        urlLoader.removeEventListener(IOErrorEvent.IO_ERROR, ioErrorHandler);
+    }
 
-	}
+}
 }

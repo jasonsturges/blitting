@@ -3,18 +3,16 @@
 //
 //  Created by Jason Sturges.
 //
-package com.blitting.lifecycle
-{
-	import flash.geom.Rectangle;
+package com.blitting.lifecycle {
+import flash.geom.Rectangle;
 
-	public interface IRenderable
-	{
+public interface IRenderable {
 
-		function prerender():void;
+    function prerender():void;
 
-		function render():void;
+    function render():void;
 
-		function postrender(changeRect:Rectangle=null):void;
+    function postrender(changeRect:Rectangle = null):void;
 
-	}
+}
 }

@@ -3,19 +3,17 @@
 //
 //  Created by Jason Sturges.
 //
-package com.blitting.core
-{
+package com.blitting.core {
 
-	public class InvalidationType
-	{
-		include "../core/Version.as";
+public class InvalidationType {
+    include "../core/Version.as";
 
 
-		public static const ASCENDANTS:String = "ASCENDANTS";
+    public static const ASCENDANTS:String = "ASCENDANTS";
 
-		public static const SELF:String = "SELF";
+    public static const SELF:String = "SELF";
 
-		public static const DESCENDANTS:String = "DESCENDANTS";
+    public static const DESCENDANTS:String = "DESCENDANTS";
 
-	}
+}
 }

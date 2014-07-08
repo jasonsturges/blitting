@@ -1,7 +1,5 @@
-package com.blitting.model
-{
-	public interface IAbstractSingleton
-	{
-		
-	}
+package com.blitting.model {
+public interface IAbstractSingleton {
+
+}
 }

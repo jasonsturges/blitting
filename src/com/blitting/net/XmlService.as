@@ -3,65 +3,58 @@
 //
 //  Created by Jason Sturges.
 //
-package com.blitting.net
-{
-	import flash.events.Event;
-	import flash.events.IOErrorEvent;
-	import flash.events.SecurityErrorEvent;
+package com.blitting.net {
+import flash.events.Event;
+import flash.events.IOErrorEvent;
+import flash.events.SecurityErrorEvent;
 
-	public class XmlService extends AbstractService
-	{
-		include "../core/Version.as";
+public class XmlService extends AbstractService {
+    include "../core/Version.as";
 
 
-		//------------------------------
-		//  model
-		//------------------------------
+    //------------------------------
+    //  model
+    //------------------------------
 
-		public var xml:XML = null;
+    public var xml:XML = null;
 
 
-		//------------------------------
-		//  lifecycle
-		//------------------------------
+    //------------------------------
+    //  lifecycle
+    //------------------------------
 
-		public function XmlService()
-		{
-			super();
-		}
+    public function XmlService() {
+        super();
+    }
 
-		override protected function completeHandler(event:Event):void
-		{
-			super.completeHandler(event);
+    override protected function completeHandler(event:Event):void {
+        super.completeHandler(event);
 
-			if (event.target.data)
-				xml = new XML(event.target.data);
+        if (event.target.data)
+            xml = new XML(event.target.data);
 
-			dispatchEvent(event);
+        dispatchEvent(event);
 
-			dispose();
-		}
+        dispose();
+    }
 
-		override protected function ioErrorHandler(event:IOErrorEvent):void
-		{
-			dispatchEvent(event);
+    override protected function ioErrorHandler(event:IOErrorEvent):void {
+        dispatchEvent(event);
 
-			dispose();
-		}
+        dispose();
+    }
 
-		override protected function securityErrorHandler(event:SecurityErrorEvent):void
-		{
-			dispatchEvent(event);
+    override protected function securityErrorHandler(event:SecurityErrorEvent):void {
+        dispatchEvent(event);
 
-			dispose();
-		}
+        dispose();
+    }
 
-		override public function dispose():void
-		{
-			super.dispose();
+    override public function dispose():void {
+        super.dispose();
 
-			xml = null;
-		}
+        xml = null;
+    }
 
-	}
+}
 }

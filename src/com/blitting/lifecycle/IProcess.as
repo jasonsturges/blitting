@@ -3,15 +3,13 @@
 //
 //  Created by Jason Sturges.
 //
-package com.blitting.lifecycle
-{
+package com.blitting.lifecycle {
 
-	public interface IProcess
-	{
+public interface IProcess {
 
-		function start():void;
+    function start():void;
 
-		function stop():void;
+    function stop():void;
 
-	}
+}
 }

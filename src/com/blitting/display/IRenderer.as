@@ -1,7 +1,5 @@
-package com.blitting.display
-{
+package com.blitting.display {
 
-	public interface IRenderer extends IViewport
-	{
-	}
+public interface IRenderer extends IViewport {
+}
 }
