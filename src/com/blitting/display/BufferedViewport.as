@@ -120,7 +120,7 @@ public class BufferedViewport extends ResizableViewport {
      */
     public function addRenderer(renderer:IRenderer):void {
         if (!renderers)
-            renderers = new Vector.<IRenderer>();
+            renderers = new <IRenderer>[];
 
         renderers.push(renderer);
     }

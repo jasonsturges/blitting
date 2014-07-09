@@ -61,7 +61,7 @@ public class ObjectPool implements IAbstractFactory, IAbstractSingleton {
             return null;
 
         if (!(type in pool))
-            pool[type] = new Vector.<Object>;
+            pool[type] = new <Object>[];
 
         var set:Vector.<Object> = Vector.<Object>(pool[type]);
 
@@ -93,7 +93,7 @@ public class ObjectPool implements IAbstractFactory, IAbstractSingleton {
             IDisposable(object).dispose();
 
         if (!(type in pool))
-            pool[type] = new Vector.<Object>;
+            pool[type] = new <Object>[];
 
         var set:Vector.<Object> = Vector.<Object>(pool[type]);
 

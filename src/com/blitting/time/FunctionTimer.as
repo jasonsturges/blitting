@@ -36,7 +36,7 @@ public class FunctionTimer extends RandomTimer {
     public function FunctionTimer(min:Number, max:Number, repeatCount:int = 0) {
         super(min, max, repeatCount);
 
-        _functions = new Vector.<Function>();
+        _functions = new <Function>[];
     }
 
     /**
