@@ -10,10 +10,7 @@ public class Statistics {
 
 
     public static function probability(occured:Number, outcomes:Number):Boolean {
-        if (Math.random() * outcomes < occured)
-            return true;
-
-        return false;
+        return Math.random() * outcomes < occured;
     }
 
 }
