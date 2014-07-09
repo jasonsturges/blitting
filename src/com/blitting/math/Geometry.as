@@ -111,13 +111,12 @@ public class Geometry {
      * @return          True if point is within bounds.
      */
     public static function withinBounds(x:Number, y:Number, bounds:Rectangle):Boolean {
-        if ((x > bounds.x) &&
+        return ((x > bounds.x) &&
                 (x < bounds.x + bounds.width) &&
                 (y > bounds.y) &&
-                (y < bounds.y + bounds.height))
-            return true;
+                (y < bounds.y + bounds.height));
 
-        return false;
+
     }
 
 }
