@@ -9,8 +9,8 @@ public class Statistics {
     include "../core/Version.as";
 
 
-    public static function probability(occured:Number, outcomes:Number):Boolean {
-        return Math.random() * outcomes < occured;
+    public static function probability(occurred:Number, outcomes:Number):Boolean {
+        return Math.random() * outcomes < occurred;
     }
 
 }
