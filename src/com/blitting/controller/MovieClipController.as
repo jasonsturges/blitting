@@ -12,8 +12,6 @@ import flash.utils.Dictionary;
  * playing clips.
  */
 public class MovieClipController extends EventDispatcher implements IAbstractController, IAbstractSingleton {
-    include "../core/Version.as";
-
 
     //------------------------------
     //  singleton instance

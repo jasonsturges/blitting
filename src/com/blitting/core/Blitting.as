@@ -19,8 +19,6 @@ import flash.utils.Dictionary;
 import flash.utils.getTimer;
 
 public class Blitting extends EventDispatcher implements IProcess, IDisposable, IAbstractController, IAbstractSingleton {
-    include "../core/Version.as";
-
 
     //------------------------------
     //  singleton instance

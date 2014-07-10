@@ -21,8 +21,6 @@ use namespace blitting_internal;
  * </ul>
  */
 public class ResizableViewport extends RenderedViewport implements IResizable {
-    include "../core/Version.as";
-
 
     //------------------------------
     //  model

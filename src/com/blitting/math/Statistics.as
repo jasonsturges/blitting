@@ -6,14 +6,9 @@
 package com.blitting.math {
 
 public class Statistics {
-    include "../core/Version.as";
 
-
-    public static function probability(occured:Number, outcomes:Number):Boolean {
-        if (Math.random() * outcomes < occured)
-            return true;
-
-        return false;
+    public static function probability(occurred:Number, outcomes:Number):Boolean {
+        return Math.random() * outcomes < occurred;
     }
 
 }

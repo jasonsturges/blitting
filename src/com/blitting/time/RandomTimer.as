@@ -21,8 +21,6 @@ import flash.utils.Timer;
  * </p>
  */
 public class RandomTimer extends Timer {
-    include "../core/Version.as";
-
 
     //------------------------------
     //  model
@@ -92,40 +90,31 @@ public class RandomTimer extends Timer {
     }
 
     /**
-     * <p>
      * Handler on TimerEvent.TIMER, responsible for
-     * changing delay to random value.<br />
-     * </p>
-     * <p>
+     * changing delay to random value.
+     *
      * When inheriting from RandomTimer, this override
      * provides a convenient implementation to timer
-     * event handling without directly assigned.<br />
-     * </p>
-     * <p>
-     * Example:<br />
-     * <pre>
-     * public class FunctionTimer extends RandomTimer
-     * {
-		 *    private var _functions:Vector.&lt;Function&gt; = new Vector.&lt;Function&gt;();
-		 *
-		 *    public function addFunction(f:Function):void
-		 *    {
-		 *       _functions.push(f);
-		 *    }
-		 *
-		 *    override protected function timerHandler(event:TimerEvent):void
-		 *    {
-		 *       super.timerHandler(event);
-		 *
-		 *       for each(var f:Function in _functions)
-		 *       {
-		 *          if(f != null)
-		 *             f();
-		 *       }
-		 *    }
-		 * }
-     * </pre>
-     * </p>
+     * event handling without directly assigned.
+     *
+     * Example:
+     * <pre><code>
+     * public class FunctionTimer extends RandomTimer {
+     *     private var _functions:Vector.&lt;Function&gt; = new &lt;Function&gt;[];
+     *
+     *     public function addFunction(f:Function):void {
+     *         _functions.push(f);
+     *     }
+     *
+     *     override protected function timerHandler(event:TimerEvent):void {
+     *         super.timerHandler(event);
+     *         for each(var f:Function in _functions) {
+     *             if (f != null)
+     *                 f();
+     *         }
+     *     }
+     * }
+     * </code></pre>
      */
     protected function timerHandler(event:TimerEvent):void {
         _count++;

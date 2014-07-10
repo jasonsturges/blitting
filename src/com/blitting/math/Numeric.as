@@ -6,8 +6,6 @@
 package com.blitting.math {
 
 public class Numeric {
-    include "../core/Version.as";
-
 
     /**
      * Convert a ratio to a value, using the min and max values

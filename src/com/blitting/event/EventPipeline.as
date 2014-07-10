@@ -9,8 +9,6 @@ import com.blitting.model.IAbstractSingleton;
 import flash.events.EventDispatcher;
 
 public class EventPipeline extends EventDispatcher implements IAbstractSingleton {
-    include "../core/Version.as";
-
 
     //------------------------------
     //  singleton instance

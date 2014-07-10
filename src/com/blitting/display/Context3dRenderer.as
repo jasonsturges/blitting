@@ -10,12 +10,10 @@ use namespace blitting_internal;
 
 /**
  *
- * @author jsturges
+ * @author Jason Sturges
  *
  */
 public class Context3dRenderer extends AbstractRenderer {
-    include "../core/Version.as";
-
 
     //------------------------------
     //  model

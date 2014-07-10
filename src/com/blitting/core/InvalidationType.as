@@ -6,8 +6,6 @@
 package com.blitting.core {
 
 public class InvalidationType {
-    include "../core/Version.as";
-
 
     public static const ASCENDANTS:String = "ASCENDANTS";
 

@@ -14,8 +14,6 @@ import flash.net.registerClassAlias;
  * Color structure.
  */
 public class Color implements IInitializable {
-    include "../core/Version.as";
-
 
     //------------------------------
     //  model

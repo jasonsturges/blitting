@@ -9,7 +9,7 @@ package com.blitting.lifecycle {
  * Implements <code>dispose()</code> interface as class
  * destructor.
  *
- * @author jsturges
+ * @author Jason Sturges
  *
  */
 public interface IDisposable {

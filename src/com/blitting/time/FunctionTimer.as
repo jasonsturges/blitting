@@ -11,8 +11,6 @@ import flash.events.TimerEvent;
  * at random intervals.
  */
 public class FunctionTimer extends RandomTimer {
-    include "../core/Version.as";
-
 
     //------------------------------
     //  model
@@ -36,7 +34,7 @@ public class FunctionTimer extends RandomTimer {
     public function FunctionTimer(min:Number, max:Number, repeatCount:int = 0) {
         super(min, max, repeatCount);
 
-        _functions = new Vector.<Function>();
+        _functions = new <Function>[];
     }
 
     /**

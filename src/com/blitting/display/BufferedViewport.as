@@ -24,12 +24,10 @@ use namespace blitting_internal;
 
 /**
  *
- * @author jsturges
+ * @author Jason Sturges
  *
  */
 public class BufferedViewport extends ResizableViewport {
-    include "../core/Version.as";
-
 
     //------------------------------
     //  model
@@ -120,7 +118,7 @@ public class BufferedViewport extends ResizableViewport {
      */
     public function addRenderer(renderer:IRenderer):void {
         if (!renderers)
-            renderers = new Vector.<IRenderer>();
+            renderers = new <IRenderer>[];
 
         renderers.push(renderer);
     }

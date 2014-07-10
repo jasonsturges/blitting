@@ -14,8 +14,6 @@ import flash.events.SecurityErrorEvent;
 import flash.net.Socket;
 
 public class AbstractSocketService extends EventDispatcher implements IDisposable {
-    include "../core/Version.as";
-
 
     //------------------------------
     //  model

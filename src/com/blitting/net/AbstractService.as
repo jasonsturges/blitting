@@ -15,8 +15,6 @@ import flash.net.URLRequest;
 import flash.net.URLRequestMethod;
 
 public class AbstractService extends EventDispatcher implements IDisposable {
-    include "../core/Version.as";
-
 
     //------------------------------
     //  model
