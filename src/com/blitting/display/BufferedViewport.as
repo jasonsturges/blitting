@@ -24,7 +24,7 @@ use namespace blitting_internal;
 
 /**
  *
- * @author jsturges
+ * @author Jason Sturges
  *
  */
 public class BufferedViewport extends ResizableViewport {

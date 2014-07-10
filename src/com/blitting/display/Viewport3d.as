@@ -23,7 +23,7 @@ use namespace blitting_internal;
  *    new Viewport3d(Context3DRenderMode.SOFTWARE);
  * </code></pre>
  *
- * @author jsturges
+ * @author Jason Sturges
  *
  */
 public class Viewport3d extends ResizableViewport {

@@ -18,7 +18,7 @@ use namespace blitting_internal;
 
 /**
  *
- * @author jsturges
+ * @author Jason Sturges
  *
  */
 public class AbstractRenderer extends EventDispatcher implements IRenderer, IViewport, IInitializable, IDisposable {

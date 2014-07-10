@@ -15,7 +15,7 @@ import flash.utils.Timer;
  * new CallLater(5000, exampleFunction, "Hello", "World!").call();
  * </code></pre>
  *
- * @author jason
+ * @author Jason Sturges
  */
 public class CallLater {
 
