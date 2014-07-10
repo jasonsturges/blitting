@@ -12,8 +12,6 @@ import flash.geom.Rectangle;
  * Geometric utility package of static methods.
  */
 public class Geometry {
-    include "../core/Version.as";
-
 
     /**
      * Convert radians to degrees.

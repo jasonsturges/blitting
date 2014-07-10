@@ -27,8 +27,6 @@ use namespace blitting_internal;
  * </ul>
  */
 public class RenderedViewport extends Viewport implements IRenderable {
-    include "../core/Version.as";
-
 
     //------------------------------
     //  model

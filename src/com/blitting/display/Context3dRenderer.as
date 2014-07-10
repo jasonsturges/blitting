@@ -14,8 +14,6 @@ use namespace blitting_internal;
  *
  */
 public class Context3dRenderer extends AbstractRenderer {
-    include "../core/Version.as";
-
 
     //------------------------------
     //  model

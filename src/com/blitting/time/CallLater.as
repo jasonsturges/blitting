@@ -20,8 +20,6 @@ import flash.utils.Timer;
  * @author jason
  */
 public class CallLater {
-    include "../core/Version.as";
-
 
     //------------------------------
     //  model

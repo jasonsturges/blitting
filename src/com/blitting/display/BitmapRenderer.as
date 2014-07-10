@@ -16,8 +16,6 @@ use namespace blitting_internal;
  *
  */
 public class BitmapRenderer extends AbstractRenderer implements IBitmapRenderer {
-    include "../core/Version.as";
-
 
     //------------------------------
     //  model

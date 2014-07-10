@@ -11,8 +11,6 @@ import flash.events.TimerEvent;
  * at random intervals.
  */
 public class FunctionTimer extends RandomTimer {
-    include "../core/Version.as";
-
 
     //------------------------------
     //  model

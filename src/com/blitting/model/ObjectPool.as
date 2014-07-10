@@ -12,8 +12,6 @@ import flash.utils.getDefinitionByName;
 import flash.utils.getQualifiedClassName;
 
 public class ObjectPool implements IAbstractFactory, IAbstractSingleton {
-    include "../core/Version.as";
-
 
     //------------------------------
     //  singleton instance

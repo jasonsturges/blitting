@@ -19,8 +19,6 @@ package com.blitting.constant {
  * </pre>
  */
 public class ColorPalette {
-    include "../core/Version.as";
-
 
     //------------------------------
     //  model

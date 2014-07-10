@@ -9,8 +9,6 @@ import flash.events.IOErrorEvent;
 import flash.events.SecurityErrorEvent;
 
 public class XmlService extends AbstractService {
-    include "../core/Version.as";
-
 
     //------------------------------
     //  model

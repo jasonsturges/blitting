@@ -27,8 +27,6 @@ package com.blitting.constant {
  * </ol>
  */
 public class DataState {
-    include "../core/Version.as";
-
 
     /**
      * Object not initialized with data, nor attempted to load data.

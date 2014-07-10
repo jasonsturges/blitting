@@ -16,8 +16,6 @@ import flash.utils.ByteArray;
  * globally unique identifier (GUID).
  */
 public class UUID implements IDisposable, IInitializable {
-    include "../core/Version.as";
-
 
     //------------------------------
     //  const

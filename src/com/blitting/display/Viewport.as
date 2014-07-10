@@ -31,8 +31,6 @@ use namespace blitting_internal;
  * </ul>
  */
 public class Viewport extends AbstractViewport implements IValidatable {
-    include "../core/Version.as";
-
 
     //------------------------------
     //  model

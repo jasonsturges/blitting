@@ -5,8 +5,6 @@ import flash.net.registerClassAlias;
 
 [RemoteClass(alias="com.blitting.time.TimeSpan")]
 public class TimeSpan implements IInitializable {
-    include "../core/Version.as";
-
 
     //------------------------------
     //  const

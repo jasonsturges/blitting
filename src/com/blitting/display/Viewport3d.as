@@ -27,8 +27,6 @@ use namespace blitting_internal;
  *
  */
 public class Viewport3d extends ResizableViewport {
-    include "../core/Version.as";
-
 
     //------------------------------
     //  model

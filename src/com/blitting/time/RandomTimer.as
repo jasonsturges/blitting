@@ -21,8 +21,6 @@ import flash.utils.Timer;
  * </p>
  */
 public class RandomTimer extends Timer {
-    include "../core/Version.as";
-
 
     //------------------------------
     //  model

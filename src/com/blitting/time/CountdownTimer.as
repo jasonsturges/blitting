@@ -8,8 +8,6 @@ import flash.events.TimerEvent;
 import flash.utils.Timer;
 
 public class CountdownTimer extends Timer {
-    include "../core/Version.as";
-
 
     //------------------------------
     //  model

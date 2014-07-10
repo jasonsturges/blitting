@@ -1,8 +1,6 @@
 package com.blitting.error {
 
 public class BlittingInvalidOperation extends Error {
-    include "../core/Version.as";
-
 
     //------------------------------
     //  lifecycle

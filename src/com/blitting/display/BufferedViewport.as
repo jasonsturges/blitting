@@ -28,8 +28,6 @@ use namespace blitting_internal;
  *
  */
 public class BufferedViewport extends ResizableViewport {
-    include "../core/Version.as";
-
 
     //------------------------------
     //  model

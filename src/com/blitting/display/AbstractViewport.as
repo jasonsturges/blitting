@@ -32,8 +32,6 @@ use namespace blitting_internal;
  * </ul>
  */
 public class AbstractViewport extends Sprite implements IViewport, IInitializable, IDisposable {
-    include "../core/Version.as";
-
 
     //------------------------------
     //  model

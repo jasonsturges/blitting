@@ -22,8 +22,6 @@ use namespace blitting_internal;
  *
  */
 public class AbstractRenderer extends EventDispatcher implements IRenderer, IViewport, IInitializable, IDisposable {
-    include "../core/Version.as";
-
 
     //------------------------------
     //  model

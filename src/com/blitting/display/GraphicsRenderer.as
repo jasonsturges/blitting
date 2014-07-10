@@ -17,8 +17,6 @@ use namespace blitting_internal;
  *
  */
 public class GraphicsRenderer extends AbstractRenderer implements IGraphicsRenderer {
-    include "../core/Version.as";
-
 
     //------------------------------
     //  model
