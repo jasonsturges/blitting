@@ -19,9 +19,9 @@ use namespace blitting_internal;
  *
  * To request software rendering:
  *
- * <code>
+ * <pre><code>
  *    new Viewport3d(Context3DRenderMode.SOFTWARE);
- * </code>
+ * </code></pre>
  *
  * @author jsturges
  *

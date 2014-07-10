@@ -10,13 +10,11 @@ import flash.utils.Timer;
 /**
  * Setup a timer to call a handler once at a later time.
  *
- * <p>
  * Example:
+ * <pre><code>
+ * new CallLater(5000, exampleFunction, "Hello", "World!").call();
+ * </code></pre>
  *
- * <pre>
- * new CallLater(exampleFunction2, 5000, "Hello", "World!").call();
- * </pre>
- * </p>
  * @author jason
  */
 public class CallLater {

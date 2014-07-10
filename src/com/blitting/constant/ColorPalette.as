@@ -11,12 +11,11 @@ package com.blitting.constant {
  * Use the static X11ColorPalette Colors array of names for full enumeration.
  *
  * Example:
- * <pre>
- * for(var i:uint = 0; i &lt; X11ColorPalette.Colors.length; i++)
- * {
-	 *    var color:uint = X11ColorPalette[X11ColorPalette.Colors[i]];
-	 * }
- * </pre>
+ * <pre><code>
+ * for(var i:uint = 0; i &lt; X11ColorPalette.Colors.length; i++) {
+ *     var color:uint = X11ColorPalette[X11ColorPalette.Colors[i]];
+ * }
+ * </code></pre>
  */
 public class ColorPalette {
 
