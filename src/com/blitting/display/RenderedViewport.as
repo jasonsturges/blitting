@@ -50,6 +50,24 @@ public class RenderedViewport extends Viewport implements IRenderable {
     }
 
     /**
+     * Frame rate of rendering.
+     */
+    protected var _frameRate:Number = 60;
+
+    /**
+     * Frame rate of rendering.
+     */
+    public function get frameRate():Number {
+        return _frameRate;
+    }
+
+    public function set frameRate(value:Number):void {
+        _frameRate = value;
+
+        invalidate();
+    }
+
+    /**
      * Render type / mode of rending.
      */
     public var renderType:String = RenderType.ON_INVALIDATION;
@@ -98,6 +116,7 @@ public class RenderedViewport extends Viewport implements IRenderable {
 
         renderType = RenderType.ON_INVALIDATION;
         _frameNumber = 0;
+        _frameRate = 60;
         _runtime = getTimer();
         _deltaTime = getTimer();
     }
@@ -151,6 +170,8 @@ public class RenderedViewport extends Viewport implements IRenderable {
      */
     override public function validate():void {
         super.validate();
+
+        stage.frameRate = frameRate;
     }
 
     /**
