@@ -55,15 +55,27 @@ public class RenderedViewport extends Viewport implements IRenderable {
     public var renderType:String = RenderType.ON_INVALIDATION;
 
     /**
-     * Total runtime of viewport.
+     * Total time elapsed of viewport, in milliseconds.
      */
     protected var _runtime:int = getTimer();
 
     /**
-     * Total runtime of viewport.
+     * Total time elapsed of viewport, in milliseconds.
      */
     public function get runtime():int {
         return getTimer() - _runtime;
+    }
+
+    /**
+     * Time elapsed since last frame render, in milliseconds
+     */
+    private var _deltaTime:int = getTimer();
+
+    /**
+     * Time elapsed since last frame render, in milliseconds
+     */
+    public function get deltaTime():int {
+        return getTimer() - _deltaTime;
     }
 
 
@@ -145,6 +157,9 @@ public class RenderedViewport extends Viewport implements IRenderable {
      */
     public function prerender():void {
         ++_frameNumber;
+
+        // Update time elapsed since last frame render.
+        _deltaTime = getTimer();
     }
 
     /**
