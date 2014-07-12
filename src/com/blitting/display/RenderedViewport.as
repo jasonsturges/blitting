@@ -99,6 +99,7 @@ public class RenderedViewport extends Viewport implements IRenderable {
         renderType = RenderType.ON_INVALIDATION;
         _frameNumber = 0;
         _runtime = getTimer();
+        _deltaTime = getTimer();
     }
 
     /**
