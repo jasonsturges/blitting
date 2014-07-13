@@ -62,8 +62,10 @@ public class RenderedViewport extends Viewport implements IRenderable {
     }
 
     public function set frameRate(value:Number):void {
-        _frameRate = value;
+        if (_frameRate == value)
+            return;
 
+        _frameRate = value;
         invalidate();
     }
 
