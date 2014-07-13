@@ -106,8 +106,10 @@ public class RenderedViewport extends Viewport implements IRenderable {
     /**
      * constructor
      */
-    public function RenderedViewport() {
+    public function RenderedViewport(frameRate:Number = 60) {
         super();
+
+        this.frameRate = frameRate;
     }
 
     /**
