@@ -47,6 +47,8 @@ public class ResizableViewport extends RenderedViewport implements IResizable {
      * initialize (IInitializable)
      */
     override public function initialize():void {
+        super.initialize();
+
         fullStage = false;
     }
 

@@ -50,20 +50,50 @@ public class RenderedViewport extends Viewport implements IRenderable {
     }
 
     /**
+     * Frame rate of rendering.
+     */
+    protected var _frameRate:Number = 60;
+
+    /**
+     * Frame rate of rendering.
+     */
+    public function get frameRate():Number {
+        return _frameRate;
+    }
+
+    public function set frameRate(value:Number):void {
+        _frameRate = value;
+
+        invalidate();
+    }
+
+    /**
      * Render type / mode of rending.
      */
     public var renderType:String = RenderType.ON_INVALIDATION;
 
     /**
-     * Total runtime of viewport.
+     * Total time elapsed of viewport, in milliseconds.
      */
     protected var _runtime:int = getTimer();
 
     /**
-     * Total runtime of viewport.
+     * Total time elapsed of viewport, in milliseconds.
      */
     public function get runtime():int {
         return getTimer() - _runtime;
+    }
+
+    /**
+     * Time elapsed since last frame render, in milliseconds
+     */
+    private var _deltaTime:int = getTimer();
+
+    /**
+     * Time elapsed since last frame render, in milliseconds
+     */
+    public function get deltaTime():int {
+        return getTimer() - _deltaTime;
     }
 
 
@@ -86,7 +116,9 @@ public class RenderedViewport extends Viewport implements IRenderable {
 
         renderType = RenderType.ON_INVALIDATION;
         _frameNumber = 0;
+        _frameRate = 60;
         _runtime = getTimer();
+        _deltaTime = getTimer();
     }
 
     /**
@@ -138,6 +170,8 @@ public class RenderedViewport extends Viewport implements IRenderable {
      */
     override public function validate():void {
         super.validate();
+
+        stage.frameRate = frameRate;
     }
 
     /**
@@ -145,6 +179,9 @@ public class RenderedViewport extends Viewport implements IRenderable {
      */
     public function prerender():void {
         ++_frameNumber;
+
+        // Update time elapsed since last frame render.
+        _deltaTime = getTimer();
     }
 
     /**
