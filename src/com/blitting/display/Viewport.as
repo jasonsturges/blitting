@@ -52,11 +52,6 @@ public class Viewport extends AbstractViewport implements IValidatable {
      */
     public function Viewport() {
         super();
-
-        focusRect = mouseEnabled = mouseChildren = tabEnabled = tabChildren = false;
-
-        // add added to stage listener.
-        addEventListener(Event.ADDED_TO_STAGE, addedToStageHandler);
     }
 
     /**
