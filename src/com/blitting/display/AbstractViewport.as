@@ -73,6 +73,8 @@ public class AbstractViewport extends Sprite implements IViewport, IInitializabl
      */
     public function AbstractViewport() {
         super();
+
+        initialize();
     }
 
     /**
