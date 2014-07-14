@@ -108,6 +108,7 @@ public class Viewport3d extends ResizableViewport {
      */
     protected function context3dCreateHandler(event:Event):void {
         stage3d = event.target as Stage3D;
+        stage3d.removeEventListener(Event.CONTEXT3D_CREATE, context3dCreateHandler);
 
         context3d = stage3d.context3D;
         context3d.enableErrorChecking = enableErrorChecking;
@@ -158,6 +159,23 @@ public class Viewport3d extends ResizableViewport {
             return;
 
         context3d.present();
+    }
+
+    /**
+     *
+     * @param event
+     */
+    override protected function removedFromStageHandler(event:Event):void {
+        super.removedFromStageHandler(event);
+
+        stage.stage3Ds[0].removeEventListener(ErrorEvent.ERROR, errorEventHandler);
+    }
+
+    /**
+     *
+     */
+    override public function dispose():void {
+        super.dispose();
     }
 
 }
