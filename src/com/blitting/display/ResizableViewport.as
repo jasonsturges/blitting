@@ -29,7 +29,7 @@ public class ResizableViewport extends RenderedViewport implements IResizable {
     /**
      * Bind to full stage bounds.
      */
-    public var fullStage:Boolean = false;
+    public var fullStage:Boolean;
 
 
     //------------------------------
@@ -116,6 +116,8 @@ public class ResizableViewport extends RenderedViewport implements IResizable {
      * dispose (IDisposable)
      */
     override public function dispose():void {
+        super.dispose();
+
         // remove resize event listener
         removeEventListener(Event.RESIZE, resizeHandler);
 

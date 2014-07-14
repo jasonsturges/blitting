@@ -40,7 +40,7 @@ public class AbstractViewport extends Sprite implements IViewport, IInitializabl
     /**
      * Viewport bounds (IViewport)
      */
-    private var _bounds:Rectangle = new Rectangle();
+    private var _bounds:Rectangle;
 
     public function get bounds():Rectangle {
         return _bounds;
@@ -53,7 +53,7 @@ public class AbstractViewport extends Sprite implements IViewport, IInitializabl
     /**
      * Registration point (IViewport)
      */
-    private var _registration:Point = new Point();
+    private var _registration:Point;
 
     public function get registration():Point {
         return _registration;

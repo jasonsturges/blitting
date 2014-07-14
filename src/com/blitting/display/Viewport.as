@@ -40,7 +40,7 @@ public class Viewport extends AbstractViewport implements IValidatable {
      * Whether properties have been invalidated,
      * requiring validation.
      */
-    protected var invalidated:Boolean = false;
+    protected var invalidated:Boolean;
 
 
     //------------------------------
@@ -76,6 +76,17 @@ public class Viewport extends AbstractViewport implements IValidatable {
     }
 
     /**
+     * addedToStageHandler
+     */
+    protected function addedToStageHandler(event:Event):void {
+        // remove added to stage event listener.
+        removeEventListener(Event.ADDED_TO_STAGE, addedToStageHandler);
+
+        // add removed from stage listener.
+        addEventListener(Event.REMOVED_FROM_STAGE, removedFromStageHandler);
+    }
+
+    /**
      * Indicate component has been invalidated. (IValidatable).
      *
      * Viewport abstract base class does not manage invalidation through
@@ -98,17 +109,6 @@ public class Viewport extends AbstractViewport implements IValidatable {
      */
     public function validate():void {
         invalidated = false;
-    }
-
-    /**
-     * addedToStageHandler
-     */
-    protected function addedToStageHandler(event:Event):void {
-        // remove added to stage event listener.
-        removeEventListener(Event.ADDED_TO_STAGE, addedToStageHandler);
-
-        // add removed from stage listener.
-        addEventListener(Event.REMOVED_FROM_STAGE, removedFromStageHandler);
     }
 
     /**

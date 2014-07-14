@@ -32,23 +32,23 @@ public class Viewport3d extends ResizableViewport {
     //  model
     //------------------------------
 
-    protected var antiAlias:int = 16;
+    protected var antiAlias:int;
 
     protected var context3d:Context3D;
 
-    protected var context3dCreated:Boolean = false;
+    protected var context3dCreated:Boolean;
 
-    protected var context3dRenderMode:String = Context3DRenderMode.AUTO;
+    protected var context3dRenderMode:String;
 
-    protected var enableDepthAndStencil:Boolean = true;
+    protected var enableDepthAndStencil:Boolean;
 
-    protected var enableErrorChecking:Boolean = false;
+    protected var enableErrorChecking:Boolean;
 
     protected var fillColor:Color;
 
     protected var stage3d:Stage3D;
 
-    protected var stage3dAvailable:Boolean = false;
+    protected var stage3dAvailable:Boolean;
 
 
     //------------------------------
@@ -73,16 +73,26 @@ public class Viewport3d extends ResizableViewport {
     /**
      *
      */
-    override protected function addedToStageHandler(event:Event):void {
-        super.addedToStageHandler(event);
+    override public function initialize():void {
+        super.initialize();
 
-        initialize3d();
+        antiAlias = 16;
+        context3d = null;
+        context3dCreated = false;
+        context3dRenderMode = Context3DRenderMode.AUTO;
+        enableDepthAndStencil = true;
+        enableErrorChecking = false;
+        fillColor = Color.fromARGB(0xff000000);
+        stage3d = null;
+        stage3dAvailable = false;
     }
 
     /**
      *
      */
-    protected function initialize3d():void {
+    override protected function addedToStageHandler(event:Event):void {
+        super.addedToStageHandler(event);
+
         stage3dAvailable = ApplicationDomain.currentDomain.hasDefinition("flash.display.Stage3D");
 
         if (!stage3dAvailable)
@@ -98,6 +108,7 @@ public class Viewport3d extends ResizableViewport {
      */
     protected function context3dCreateHandler(event:Event):void {
         stage3d = event.target as Stage3D;
+        stage3d.removeEventListener(Event.CONTEXT3D_CREATE, context3dCreateHandler);
 
         context3d = stage3d.context3D;
         context3d.enableErrorChecking = enableErrorChecking;
@@ -148,6 +159,23 @@ public class Viewport3d extends ResizableViewport {
             return;
 
         context3d.present();
+    }
+
+    /**
+     *
+     * @param event
+     */
+    override protected function removedFromStageHandler(event:Event):void {
+        super.removedFromStageHandler(event);
+
+        stage.stage3Ds[0].removeEventListener(ErrorEvent.ERROR, errorEventHandler);
+    }
+
+    /**
+     *
+     */
+    override public function dispose():void {
+        super.dispose();
     }
 
 }

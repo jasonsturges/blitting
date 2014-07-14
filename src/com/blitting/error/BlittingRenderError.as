@@ -6,7 +6,7 @@ public class BlittingRenderError extends Error {
     //  lifecycle
     //------------------------------
 
-    public function BlittingRenderError(message:* = "", id:* = 0) {
+    public function BlittingRenderError(message:* = "", id:* = undefined) {
         super(message, id);
     }
 
