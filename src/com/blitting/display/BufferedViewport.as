@@ -145,7 +145,7 @@ public class BufferedViewport extends ResizableViewport {
      */
     override public function layout():void {
         super.layout();
-        
+
         // if same size, do not resize bitmap
         if ((bitmapData) &&
                 (bitmapData.rect.width == bounds.width) &&
