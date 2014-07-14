@@ -70,6 +70,9 @@ public class Viewport3d extends ResizableViewport {
         fullStage = true;
     }
 
+    /**
+     *
+     */
     override public function initialize():void {
         super.initialize();
 
@@ -90,13 +93,6 @@ public class Viewport3d extends ResizableViewport {
     override protected function addedToStageHandler(event:Event):void {
         super.addedToStageHandler(event);
 
-        initialize3d();
-    }
-
-    /**
-     *
-     */
-    protected function initialize3d():void {
         stage3dAvailable = ApplicationDomain.currentDomain.hasDefinition("flash.display.Stage3D");
 
         if (!stage3dAvailable)
