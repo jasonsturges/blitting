@@ -40,7 +40,7 @@ public class RenderedViewport extends Viewport implements IRenderable {
     /**
      * Current (total) frame number.
      */
-    protected var _frameNumber:uint = 0;
+    protected var _frameNumber:uint;
 
     /**
      * Current (total) frame number.
@@ -52,7 +52,7 @@ public class RenderedViewport extends Viewport implements IRenderable {
     /**
      * Frame rate of rendering.
      */
-    protected var _frameRate:Number = 60;
+    protected var _frameRate:Number;
 
     /**
      * Frame rate of rendering.
@@ -72,12 +72,12 @@ public class RenderedViewport extends Viewport implements IRenderable {
     /**
      * Render type / mode of rending.
      */
-    public var renderType:String = RenderType.ON_INVALIDATION;
+    public var renderType:String;
 
     /**
      * Total time elapsed of viewport, in milliseconds.
      */
-    protected var _runtime:int = getTimer();
+    protected var _runtime:int;
 
     /**
      * Total time elapsed of viewport, in milliseconds.
@@ -89,7 +89,7 @@ public class RenderedViewport extends Viewport implements IRenderable {
     /**
      * Time elapsed since last frame render, in milliseconds
      */
-    private var _deltaTime:int = getTimer();
+    private var _deltaTime:int;
 
     /**
      * Time elapsed since last frame render, in milliseconds

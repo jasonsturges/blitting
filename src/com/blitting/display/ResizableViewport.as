@@ -29,7 +29,7 @@ public class ResizableViewport extends RenderedViewport implements IResizable {
     /**
      * Bind to full stage bounds.
      */
-    public var fullStage:Boolean = false;
+    public var fullStage:Boolean;
 
 
     //------------------------------

@@ -40,7 +40,7 @@ public class Viewport extends AbstractViewport implements IValidatable {
      * Whether properties have been invalidated,
      * requiring validation.
      */
-    protected var invalidated:Boolean = false;
+    protected var invalidated:Boolean;
 
 
     //------------------------------

@@ -32,23 +32,23 @@ public class Viewport3d extends ResizableViewport {
     //  model
     //------------------------------
 
-    protected var antiAlias:int = 16;
+    protected var antiAlias:int;
 
     protected var context3d:Context3D;
 
-    protected var context3dCreated:Boolean = false;
+    protected var context3dCreated:Boolean;
 
-    protected var context3dRenderMode:String = Context3DRenderMode.AUTO;
+    protected var context3dRenderMode:String;
 
-    protected var enableDepthAndStencil:Boolean = true;
+    protected var enableDepthAndStencil:Boolean;
 
-    protected var enableErrorChecking:Boolean = false;
+    protected var enableErrorChecking:Boolean;
 
     protected var fillColor:Color;
 
     protected var stage3d:Stage3D;
 
-    protected var stage3dAvailable:Boolean = false;
+    protected var stage3dAvailable:Boolean;
 
 
     //------------------------------
@@ -68,6 +68,20 @@ public class Viewport3d extends ResizableViewport {
 
         autoOrientation();
         fullStage = true;
+    }
+
+    override public function initialize():void {
+        super.initialize();
+
+        antiAlias = 16;
+        context3d = null;
+        context3dCreated = false;
+        context3dRenderMode = Context3DRenderMode.AUTO;
+        enableDepthAndStencil = true;
+        enableErrorChecking = false;
+        fillColor = Color.fromARGB(0xff000000);
+        stage3d = null;
+        stage3dAvailable = false;
     }
 
     /**
