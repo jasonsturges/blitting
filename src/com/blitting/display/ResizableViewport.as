@@ -116,6 +116,8 @@ public class ResizableViewport extends RenderedViewport implements IResizable {
      * dispose (IDisposable)
      */
     override public function dispose():void {
+        super.dispose();
+
         // remove resize event listener
         removeEventListener(Event.RESIZE, resizeHandler);
 
