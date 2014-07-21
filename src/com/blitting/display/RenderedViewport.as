@@ -175,7 +175,8 @@ public class RenderedViewport extends Viewport implements IRenderable {
     override public function validate():void {
         super.validate();
 
-        stage.frameRate = frameRate;
+        if (stage)
+            stage.frameRate = frameRate;
     }
 
     /**
