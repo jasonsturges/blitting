@@ -4,14 +4,14 @@
 //  Created by Jason Sturges.
 //
 package com.blitting.text {
-import com.blitting.model.IAbstractFactory;
+import com.blitting.model.IFactory;
 
 import flash.text.AntiAliasType;
 import flash.text.TextField;
 import flash.text.TextFieldAutoSize;
 import flash.text.TextFormat;
 
-public class TextFieldFactory implements IAbstractFactory {
+public class TextFieldFactory implements IFactory {
 
     public static function construct(text:String, textFormat:TextFormat = null, autoSize:String = TextFieldAutoSize.LEFT, antiAliasType:String = AntiAliasType.ADVANCED):TextField {
         var tf:TextField = new TextField();

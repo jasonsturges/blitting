@@ -11,7 +11,7 @@ import flash.utils.Dictionary;
 import flash.utils.getDefinitionByName;
 import flash.utils.getQualifiedClassName;
 
-public class ObjectPool implements IAbstractFactory, IAbstractSingleton {
+public class ObjectPool implements IFactory, IAbstractSingleton {
 
     //------------------------------
     //  singleton instance
