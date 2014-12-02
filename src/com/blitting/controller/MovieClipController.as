@@ -11,7 +11,7 @@ import flash.utils.Dictionary;
  * movie clips to pause and resume all currently
  * playing clips.
  */
-public class MovieClipController extends EventDispatcher implements IAbstractController, IAbstractSingleton {
+public class MovieClipController extends EventDispatcher implements IController, IAbstractSingleton {
 
     //------------------------------
     //  singleton instance

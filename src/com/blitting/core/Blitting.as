@@ -4,7 +4,7 @@
 //  Created by Jason Sturges.
 //
 package com.blitting.core {
-import com.blitting.controller.IAbstractController;
+import com.blitting.controller.IController;
 import com.blitting.lifecycle.IDisposable;
 import com.blitting.lifecycle.IProcess;
 import com.blitting.lifecycle.IRenderable;
@@ -18,7 +18,7 @@ import flash.events.EventDispatcher;
 import flash.utils.Dictionary;
 import flash.utils.getTimer;
 
-public class Blitting extends EventDispatcher implements IProcess, IDisposable, IAbstractController, IAbstractSingleton {
+public class Blitting extends EventDispatcher implements IProcess, IDisposable, IController, IAbstractSingleton {
 
     //------------------------------
     //  singleton instance
