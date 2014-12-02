@@ -218,7 +218,7 @@ public class TimeSpan implements IInitializable {
      *
      */
     public static function registerClass():void {
-        flash.net.registerClassAlias("com.blitting.time.TimeSpan", TimeSpan);
+        registerClassAlias("com.blitting.time.TimeSpan", TimeSpan);
     }
 
 }

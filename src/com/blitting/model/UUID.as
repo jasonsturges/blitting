@@ -68,7 +68,7 @@ public class UUID implements IDisposable, IInitializable {
      * Register the class alias for remoting.
      */
     public static function registerClass():void {
-        flash.net.registerClassAlias("com.blitting.model.UUID", UUID);
+        registerClassAlias("com.blitting.model.UUID", UUID);
     }
 
     public static function create(uid:String = null):UUID {

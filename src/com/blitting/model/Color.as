@@ -293,7 +293,7 @@ public class Color implements IInitializable {
      *
      */
     public static function registerClass():void {
-        flash.net.registerClassAlias("com.blitting.model.Color", Color);
+        registerClassAlias("com.blitting.model.Color", Color);
     }
 
 }
