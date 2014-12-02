@@ -4,11 +4,11 @@
 //  Created by Jason Sturges
 //
 package com.blitting.event {
-import com.blitting.model.IAbstractSingleton;
+import com.blitting.model.ISingleton;
 
 import flash.events.EventDispatcher;
 
-public class EventPipeline extends EventDispatcher implements IAbstractSingleton {
+public class EventPipeline extends EventDispatcher implements ISingleton {
 
     //------------------------------
     //  singleton instance

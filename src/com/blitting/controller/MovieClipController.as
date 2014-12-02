@@ -1,5 +1,5 @@
 package com.blitting.controller {
-import com.blitting.model.IAbstractSingleton;
+import com.blitting.model.ISingleton;
 
 import flash.display.DisplayObject;
 import flash.display.MovieClip;
@@ -11,7 +11,7 @@ import flash.utils.Dictionary;
  * movie clips to pause and resume all currently
  * playing clips.
  */
-public class MovieClipController extends EventDispatcher implements IController, IAbstractSingleton {
+public class MovieClipController extends EventDispatcher implements IController, ISingleton {
 
     //------------------------------
     //  singleton instance

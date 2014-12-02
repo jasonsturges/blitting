@@ -10,7 +10,7 @@ import com.blitting.lifecycle.IProcess;
 import com.blitting.lifecycle.IRenderable;
 import com.blitting.lifecycle.IResizable;
 import com.blitting.lifecycle.IValidatable;
-import com.blitting.model.IAbstractSingleton;
+import com.blitting.model.ISingleton;
 
 import flash.display.Shape;
 import flash.events.Event;
@@ -18,7 +18,7 @@ import flash.events.EventDispatcher;
 import flash.utils.Dictionary;
 import flash.utils.getTimer;
 
-public class Blitting extends EventDispatcher implements IProcess, IDisposable, IController, IAbstractSingleton {
+public class Blitting extends EventDispatcher implements IProcess, IDisposable, IController, ISingleton {
 
     //------------------------------
     //  singleton instance
