@@ -52,12 +52,11 @@ public class RandomTimer extends Timer {
      * </p>
      */
     public function RandomTimer(min:Number, max:Number, repeatCount:int = 0) {
+        super(delay, repeatCount);
+
         minimumDelay = min;
         maximumDelay = max;
-        delay = nextDelay();
         _repeatCount = repeatCount;
-
-        super(delay, repeatCount);
     }
 
     /**
