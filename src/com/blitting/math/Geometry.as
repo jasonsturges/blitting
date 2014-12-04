@@ -113,8 +113,6 @@ public class Geometry {
                 (x < bounds.x + bounds.width) &&
                 (y > bounds.y) &&
                 (y < bounds.y + bounds.height));
-
-
     }
 
 }
