@@ -1,5 +1,5 @@
 package com.blitting.effects {
-public interface IAbstractEffect {
+public interface IEffect {
 
 }
 }
