@@ -4,10 +4,12 @@
 //  Created by Jason Sturges.
 //
 package com.blitting.time {
+import com.blitting.lifecycle.IDisposable;
+
 import flash.events.TimerEvent;
 import flash.utils.Timer;
 
-public class CountdownTimer extends Timer {
+public class CountdownTimer extends Timer implements IDisposable {
 
     //------------------------------
     //  model
@@ -16,7 +18,15 @@ public class CountdownTimer extends Timer {
     /**
      *
      */
-    protected var time:Number = 0;
+    private var _time:Number = 0;
+
+    public function get time():Number {
+        return _time;
+    }
+
+    public function set time(value:Number):void {
+        _time = value;
+    }
 
 
     //------------------------------
@@ -31,20 +41,10 @@ public class CountdownTimer extends Timer {
     public function CountdownTimer(time:Number = Number.NEGATIVE_INFINITY, delay:Number = 1000) {
         super(delay, repeatCount);
 
-        if (isNaN(time))
-            this.time = 0;
-        else
+        if (!isNaN(time))
             this.time = time;
 
         repeatCount = Math.ceil(time / delay);
-    }
-
-    /**
-     *
-     *
-     */
-    override public function start():void {
-        super.start();
 
         addEventListener(TimerEvent.TIMER, timerHandler);
         addEventListener(TimerEvent.TIMER_COMPLETE, timerCompleteHandler);
@@ -52,8 +52,14 @@ public class CountdownTimer extends Timer {
 
     /**
      *
-     * @param event
+     */
+    override public function start():void {
+        super.start();
+    }
+
+    /**
      *
+     * @param event
      */
     protected function timerHandler(event:TimerEvent):void {
         time -= delay;
@@ -62,18 +68,21 @@ public class CountdownTimer extends Timer {
     /**
      *
      * @param event
-     *
      */
     protected function timerCompleteHandler(event:TimerEvent):void {
     }
 
     /**
      *
-     *
      */
     override public function stop():void {
         super.stop();
+    }
 
+    /**
+     * dispose (IDisposable)
+     */
+    public function dispose():void {
         removeEventListener(TimerEvent.TIMER, timerHandler);
         removeEventListener(TimerEvent.TIMER_COMPLETE, timerCompleteHandler);
     }
