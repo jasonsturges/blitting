@@ -98,12 +98,12 @@ public class Numeric {
      * <listing version="3.0">
      *    trace(0.9 - 1); // -0.09999999999999998
      *
-     *    trace(MathUtil.roundDecimal(0.9 - 1, 1)); // -0.1
-     *    trace(MathUtil.roundDecimal(0.9 - 1, 2)); // -0.1
+     *    trace(Numeric.roundDecimal(0.9 - 1, 1)); // -0.1
+     *    trace(Numeric.roundDecimal(0.9 - 1, 2)); // -0.1
      *
-     *    trace(MathUtil.roundDecimal(0.9 - 1.123, 1)); // -0.2
-     *    trace(MathUtil.roundDecimal(0.9 - 1.123, 2)); // -0.22
-     *    trace(MathUtil.roundDecimal(0.9 - 1.123, 3)); // -0.223
+     *    trace(Numeric.roundDecimal(0.9 - 1.123, 1)); // -0.2
+     *    trace(Numeric.roundDecimal(0.9 - 1.123, 2)); // -0.22
+     *    trace(Numeric.roundDecimal(0.9 - 1.123, 3)); // -0.223
      * </listing>
      */
     public static function roundDecimal(n:Number, precision:Number):Number {
