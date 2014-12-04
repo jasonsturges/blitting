@@ -35,6 +35,8 @@ public class Numeric {
 
     /**
      * Format a number with thousands separator
+     *
+     * Formats the characteristic, leaving the mantissa.
      */
     public static function formatThousandsSeparator(value:String):String {
         var d:int = value.indexOf('.');
@@ -42,7 +44,7 @@ public class Numeric {
             d = value.length;
         var s:String = value.substr(0, d);
         s = s.replace(/(\d)(?=(\d\d\d)+$)/g, "$1,");
-        s += value.substr(d, Math.min(3, value.length - d));
+        s += value.substr(d, (value.length - d));
         return (s);
     }
 
