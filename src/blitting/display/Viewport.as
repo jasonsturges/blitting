@@ -5,7 +5,7 @@
 //
 package blitting.display {
 import blitting.core.blitting_internal;
-import blitting.error.BlittingInvalidOperation;
+import blitting.error.BlittingOperationError;
 import blitting.lifecycle.IDisposable;
 import blitting.lifecycle.IValidatable;
 
@@ -73,7 +73,7 @@ public class Viewport extends AbstractViewport implements IValidatable {
      */
     public function autoOrientation():void {
         if (!stage)
-            throw new BlittingInvalidOperation("autoOrientation may only be called on a root viewport with access to the stage.");
+            throw new BlittingOperationError("autoOrientation may only be called on a root viewport with access to the stage.");
 
         stage.scaleMode = StageScaleMode.NO_SCALE;
         stage.align = StageAlign.TOP_LEFT;

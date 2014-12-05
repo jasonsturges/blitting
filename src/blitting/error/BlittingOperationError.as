@@ -1,12 +1,12 @@
 package blitting.error {
 
-public class BlittingInvalidOperation extends Error {
+public class BlittingOperationError extends Error {
 
     //------------------------------
     //  lifecycle
     //------------------------------
 
-    public function BlittingInvalidOperation(message:* = "", id:* = undefined) {
+    public function BlittingOperationError(message:* = "", id:* = undefined) {
         super(message, id);
     }
 
