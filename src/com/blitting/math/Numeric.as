@@ -85,7 +85,7 @@ public class Numeric {
     }
 
     /**
-     * Utility to deal with roundoff errors of floating point numbers.
+     * Utility to manage roundoff errors of floating point numbers.
      *
      * http://kb2.adobe.com/cps/139/tn_13989.html
      *
