@@ -27,22 +27,27 @@ public class CallLater {
      * The delay to make the call, in ms.  If delay is 0, then make the call
      * immediately; otherwise, defaulting to 1ms to execute next frame.
      */
-    private var _delay:int = 1;
+    protected var delay:int = 1;
 
     /**
-     *
+     * An object that specifies the value of `this` object within the function body.
      */
-    private var _callFunc:Function;
+    protected var scope:*;
 
     /**
-     *
+     * The function to call.
      */
-    private var _params:Array;
+    protected var callbackk:Function;
 
     /**
-     *
+     * Parameters to be passed to the function.
      */
-    private var _timer:Timer;
+    protected var params:Array;
+
+    /**
+     * Timer to dispatch time to call.
+     */
+    protected var timer:Timer;
 
 
     //------------------------------
@@ -53,59 +58,56 @@ public class CallLater {
      * Constructor
      *
      * @param delay    The delay in ms to make the call.
-     * @param callFunc The function to call.
+     * @param scope    An object that specifies the value of `this` object within the function body.
+     * @param callback The function to call.
      * @param params   Parameters to be passed to the function.
      */
-    public function CallLater(delay:int = 1, callFunc:Function = null, ...params:Array) {
-        _callFunc = callFunc;
-        _delay = delay;
-        _params = params;
-        _timer = null;
+    public function CallLater(delay:int = 1, scope:* = null, callback:Function = null, ...params:Array) {
+        this.delay = delay;
+        this.scope = scope;
+        this.callbackk = callback;
+        this.params = params;
+
+        timer = null;
     }
 
     /**
      * Call the function.
      */
     public function call():void {
-        var delay:int = (_delay > 0) ? (_delay) : (0);
+        var delay:int = (delay > 0) ? (delay) : (0);
 
-        if (delay > 0 && !_timer) {
-            // setup a timer to fire once
-            _timer = new Timer(delay, 1);
-            _timer.addEventListener(TimerEvent.TIMER, timerHandler);
-
-            _timer.start();
+        if (delay > 0 && !timer) {
+            timer = new Timer(delay, 1);
+            timer.addEventListener(TimerEvent.TIMER, timerHandler);
+            timer.start();
         }
         else {
-            doCallFunc();
+            callHandler();
         }
     }
 
     /**
-     *
-     *
+     * Handler to execute the call function.
      */
-    private function doCallFunc():void {
-        // make the call
-        if (_callFunc != null)
-            _callFunc.apply(null, _params);
+    protected function callHandler():void {
+        if (callbackk != null)
+            callbackk.apply(scope, params);
 
-        // dispose
-        _callFunc = null;
-        _params = null;
+        callbackk = null;
+        params = null;
     }
 
     /**
      *
-     * @param timerEvent
+     * @param timerEvent The type of the event
      */
-    private function timerHandler(timerEvent:TimerEvent):void {
-        // dispose the timer
-        _timer.reset();
-        _timer.removeEventListener(TimerEvent.TIMER, timerHandler);
-        _timer = null;
+    protected function timerHandler(timerEvent:TimerEvent):void {
+        timer.reset();
+        timer.removeEventListener(TimerEvent.TIMER, timerHandler);
+        timer = null;
 
-        doCallFunc();
+        callHandler();
     }
 
 }
