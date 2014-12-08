@@ -26,4 +26,4 @@ Here are a few starting points:
 
 #### Licence
 
-MIT, see [LICENCE.md](LICENCE.md)
+MIT, see [LICENSE.md](LICENSE.md)
