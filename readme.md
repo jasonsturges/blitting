@@ -23,3 +23,7 @@ Here are a few starting points:
 * [Blitting Examples](http://github.com/jasonsturges/blitting-examples)
 * [Official Homepage](http://blitting.com)
 * [API Reference](http://blitting.com)
+
+#### Licence
+
+MIT, see [LICENCE.md](LICENCE.md)
