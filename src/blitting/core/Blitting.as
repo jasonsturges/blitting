@@ -143,7 +143,7 @@ public class Blitting extends EventDispatcher implements IProcess, IDisposable, 
         // instantiate renderer
         _shapeRenderer = new Shape();
 
-        // start engine by default
+        // start engine
         start();
     }
 
