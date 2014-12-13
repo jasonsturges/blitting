@@ -145,9 +145,25 @@ public class Numeric {
     }
 
     /**
-     * Round a number to an even number
+     * Round a number to an even number.
+     *
+     * If floating point value is passed, only the characteristic
+     * is evaluated (ie: whole number left of the decimal), and the
+     * mantissa is dropped.  Return will be integer.
+     *
+     * Example:
+     *
+     *     Numeric.roundEven(1); // 0
+     *     Numeric.roundEven(2); // 2
+     *     Numeric.roundEven(3); // 2
+     *     Numeric.roundEven(4); // 4
+     *
+     *     Numeric.roundEven(1.1); // 0
+     *     Numeric.roundEven(1.2); // 0
+     *     Numeric.roundEven(2.1); // 2
+     *     Numeric.roundEven(2.2); // 2
      */
-    public static function roundEven(n:Number):Number {
+    public static function roundEven(n:int):int {
         return n & 0xfffe;
     }
 
