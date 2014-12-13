@@ -54,6 +54,26 @@ public class Numeric {
     }
 
     /**
+     * Whether a number is even value.
+     *
+     * If floating point value is passed, only the characteristic
+     * is evaluated (ie: whole number left of the decimal).
+     *
+     * Example:
+     *
+     *     Numeric.isEven(1); // false
+     *     Numeric.isEven(2); // true
+     *
+     *     Numeric.isEven(1.1); // false
+     *     Numeric.isEven(1.2); // false
+     *     Numeric.isEven(2.1); // true
+     *     Numeric.isEven(2.2); // true
+     */
+    public static function isEven(n:Number):Boolean {
+        return ((n & 1) == 0);
+    }
+
+    /**
      * Format a number with thousands separator
      *
      * Formats the characteristic, leaving the mantissa.
