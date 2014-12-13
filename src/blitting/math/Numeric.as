@@ -34,6 +34,26 @@ public class Numeric {
     }
 
     /**
+     * Whether a number is odd value.
+     *
+     * If floating point value is passed, only the characteristic
+     * is evaluated (ie: whole number left of the decimal).
+     *
+     * Example:
+     *
+     *     Numeric.isOdd(1); // true
+     *     Numeric.isOdd(2); // false
+     *
+     *     Numeric.isOdd(1.1); // true
+     *     Numeric.isOdd(1.2); // true
+     *     Numeric.isOdd(2.1); // false
+     *     Numeric.isOdd(2.2); // false
+     */
+    public static function isOdd(n:Number):Boolean {
+        return ((n & 1) == 1);
+    }
+
+    /**
      * Format a number with thousands separator
      *
      * Formats the characteristic, leaving the mantissa.
@@ -116,12 +136,19 @@ public class Numeric {
      *
      * Example:
      *
-     *        roundToNearest(.25, 19.95)   = 20
+     *      roundToNearest(.25, 19.95)   = 20
      *      roundToNearest(50, 1275)     = 1300
      *
      */
     public static function roundToNearest(roundTo:Number, value:Number):Number {
         return Math.round(value / roundTo) * roundTo;
+    }
+
+    /**
+     * Round a number to an even number
+     */
+    public static function roundEven(n:Number):Number {
+        return n & 0xfffe;
     }
 
 }
