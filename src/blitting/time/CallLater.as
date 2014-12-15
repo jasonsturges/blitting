@@ -37,7 +37,7 @@ public class CallLater {
     /**
      * The function to call.
      */
-    protected var callbackk:Function;
+    protected var callback:Function;
 
     /**
      * Parameters to be passed to the function.
@@ -65,7 +65,7 @@ public class CallLater {
     public function CallLater(delay:int = 1, scope:* = null, callback:Function = null, ...params:Array) {
         this.delay = delay;
         this.scope = scope;
-        this.callbackk = callback;
+        this.callback = callback;
         this.params = params;
 
         timer = null;
@@ -91,10 +91,10 @@ public class CallLater {
      * Handler to execute the call function.
      */
     protected function callHandler():void {
-        if (callbackk != null)
-            callbackk.apply(scope, params);
+        if (callback != null)
+            callback.apply(scope, params);
 
-        callbackk = null;
+        callback = null;
         params = null;
     }
 
