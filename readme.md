@@ -24,6 +24,15 @@ Here are a few starting points:
 * [Official Homepage](http://blitting.com)
 * [API Reference](http://jasonsturges.github.io/blitting/)
 
+
+### Generating ASDoc Documentation
+
+To generate documentation, execute asdoc from the Adobe AIR SDK installation within the project report, such as:
+
+    ~/dev/sdk/AIRSDK_15.0.0.356/bin/asdoc \
+        -doc-sources . \
+        -output asdoc
+
 #### Licence
 
 MIT, see [license.md](license.md)
