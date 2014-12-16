@@ -1,5 +1,5 @@
-Blitting:
-=========
+Blitting
+========
 
 What is Blitting?
 -----------------
@@ -15,8 +15,8 @@ Releases
 * [Version 1.1.0](https://github.com/jasonsturges/blitting/releases/tag/v1.1.0) - [blitting.swc](https://github.com/jasonsturges/blitting/releases/download/v1.1.0/blitting.swc)
 
 
-Where do I find more information about Blitting?
-------------------------------------------------
+Where do I find more information?
+---------------------------------
 
 Here are a few starting points:
 
