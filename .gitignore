@@ -11,6 +11,9 @@ bin/
 bin-debug/
 bin-release/
 
+# Documentation
+asdoc/
+
 # Operating systems
 ## Mac OS X
 .DS_Store
