@@ -1,28 +1,34 @@
 Blitting
 ========
 
-What is Blitting?
------------------
+## Introduction
 
-Focused in bit BLIT, Blitting leverages performance oriented design taking
-a unique approach by defining the behavior of systems from which expected
-results may be obtained with some threshold unique to each instance.
+Blitting is a rendering engine and lifecycle pipeline for ActionScript, distributed as a SWC library.
+
+Focused in bit blit (bit-boundary block transfer), Blitting leverages performance oriented design
+for graphics, bitmap, and 3D rendering.  Through a core engine, pipelines optimize rendering, layout, and invalidation lifecycles.
+
+[Blitting OpenFL](https://github.com/jasonsturges/blitting-openfl) is an [OpenFL](http://www.openfl.org/) port to the
+[Haxe](http://haxe.org/) programming language, and is distributed as a haxelib.  Haxe developers should use Blitting OpenFL.
 
 
-Releases
---------
+### Where do I find more information?
+
+Here are a few starting points:
+
+* [Blitting Examples, GitHub repository](http://github.com/jasonsturges/blitting-examples)
+* [Official Homepage](http://blitting.com)
+* [API Reference](http://jasonsturges.github.io/blitting/)
+
+
+### Releases
 
 * [Version 1.1.0](https://github.com/jasonsturges/blitting/releases/tag/v1.1.0) - [blitting.swc](https://github.com/jasonsturges/blitting/releases/download/v1.1.0/blitting.swc)
 
 
-Where do I find more information?
----------------------------------
+## Getting Started
 
-Here are a few starting points:
-
-* [Blitting Examples](http://github.com/jasonsturges/blitting-examples)
-* [Official Homepage](http://blitting.com)
-* [API Reference](http://jasonsturges.github.io/blitting/)
+_Coming soon..._
 
 
 ### Generating ASDoc Documentation
@@ -33,6 +39,8 @@ To generate documentation, execute asdoc from the Adobe AIR SDK installation wit
         -doc-sources . \
         -output asdoc
 
-#### Licence
+## Licence
 
-MIT, see [license.md](license.md)
+Copyright 2014 [Jason Sturges](http://jasonsturges.com)
+
+This project is free, open-source software under the [MIT license](license.md).
