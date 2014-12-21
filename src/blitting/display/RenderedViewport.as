@@ -124,7 +124,6 @@ public class RenderedViewport extends Viewport implements IRenderable {
 
         renderType = RenderType.ON_INVALIDATION;
         _frameNumber = 0;
-        _frameRate = 60;
         _runtime = _deltaTime = getTimer();
     }
 
