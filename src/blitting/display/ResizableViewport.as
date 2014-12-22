@@ -77,15 +77,10 @@ public class ResizableViewport extends RenderedViewport implements IResizable {
      * remains interactive to keyboard events.
      */
     protected function fullScreen(interactive:Boolean = true):void {
-        switch (interactive) {
-            case true:
-                if (stage.allowsFullScreenInteractive)
-                    stage.displayState = StageDisplayState.FULL_SCREEN_INTERACTIVE;
-                break;
-            case false:
-                if (stage.allowsFullScreen)
-                    stage.displayState = StageDisplayState.FULL_SCREEN;
-                break;
+        if (interactive && stage.allowsFullScreenInteractive) {
+            stage.displayState = StageDisplayState.FULL_SCREEN_INTERACTIVE;
+        } else if (stage.allowsFullScreen) {
+            stage.displayState = StageDisplayState.FULL_SCREEN;
         }
     }
 
