@@ -441,8 +441,10 @@ public class BufferedViewport extends ResizableViewport {
 
         bitmap = null;
 
-        bitmapData.dispose();
-        bitmapData = null;
+        if (bitmapData) {
+            bitmapData.dispose();
+            bitmapData = null;
+        }
 
         renderers = null;
     }
