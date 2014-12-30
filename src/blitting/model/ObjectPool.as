@@ -40,7 +40,7 @@ public class ObjectPool implements IFactory, ISingleton {
 
     protected var pool:Dictionary = new Dictionary();
 
-    public var MAX_POOL_SIZE:uint = 64;
+    public var MAX_POOL_SIZE:int = 64;
 
 
     //------------------------------
