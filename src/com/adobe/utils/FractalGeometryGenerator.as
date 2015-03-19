@@ -1,4 +1,4 @@
-/**
+/*
 Copyright (c) 2011, Adobe Systems Incorporated
 All rights reserved.
 
