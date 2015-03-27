@@ -5,7 +5,7 @@
     _.__/  _| _| \__| \__| _| _|  _| \__, |
                                      |___/
     Blitting, http://blitting.com
-    Copyright (c) 2014 Jason Sturges, http://jasonsturges.com
+    Copyright (c) 2015 Jason Sturges, http://jasonsturges.com
 */
 package blitting.event {
 import blitting.model.ISingleton;

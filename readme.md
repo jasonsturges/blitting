@@ -43,4 +43,4 @@ To generate documentation, execute asdoc from the Adobe AIR SDK installation wit
 
 This project is free, open-source software under the [MIT license](license.md).
 
-Copyright 2015 [Jason Sturges](http://jasonsturges.com)
+Copyright 2010-2015 [Jason Sturges](http://jasonsturges.com)
