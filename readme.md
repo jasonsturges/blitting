@@ -39,7 +39,7 @@ To generate documentation, execute asdoc from the Adobe AIR SDK installation wit
         -doc-sources . \
         -output asdoc
 
-## Licence
+## License
 
 This project is free, open-source software under the [MIT license](license.md).
 
