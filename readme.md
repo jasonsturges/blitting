@@ -35,7 +35,7 @@ _Coming soon..._
 
 To generate documentation, execute asdoc from the Adobe AIR SDK installation within the project report, such as:
 
-    ~/dev/sdk/AIRSDK_15.0.0.356/bin/asdoc \
+    ~/sdk/AIRSDK_15.0.0.356/bin/asdoc \
         -doc-sources . \
         -output asdoc
 
